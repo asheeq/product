@@ -1,0 +1,1368 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Product",
+        "version": "1.0.0",
+        "description": "# General Response format\nEvery API will return JSON object with following properties\n* status - \n__An Integer value represents HTTP status code.__\n* title - \n__A human readable text summarizes the response__\n* details - \n__A human readable text elaborates the response__\n* timestamp - \n__An Integer value denoting Server's response timestamp in Epoch-Seconds.__\n* data - \n__An optional Array structure containing additional data__\n\n### Example\n```json\n{\n  \"status\": 200,\n  \"title\": \"Success\",\n  \"details\": \"Success\",\n  \"timestamp\": 1552233104,\n  \"data\": [\n    {\n        \"id\": 1,\n        \"name\": \"OnePlus 6\",\n        \"description\": \"Smart phone\",\n        \"status\": 1,\n        \"introduceAt\": \"2020-02-19T07:23:49.000Z\",\n        \"salesDiscontinueAt\": \"2020-02-19T07:23:49.000Z\",\n        \"createdBy\": \"admin\",\n        \"createdAt\": \"2020-02-19T07:23:49.000Z\",\n        \"updatedBy\": \"admin\",\n        \"updatedAt\": \"2020-02-19T07:23:49.000Z\"\n    }\n  ]\n}\n```"
+    },
+    "paths": {
+        "/product": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Product ID",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query",
+                        "required": false
+                    },
+                    {
+                        "name": "name",
+                        "description": "Product Name",
+                        "schema": {
+                            "maxLength": 255,
+                            "type": "string"
+                        },
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Product"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Fetch Products"
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductUpdate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Product"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Product"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Update Product Info"
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductCreate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Product"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Product"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Create New Product"
+            }
+        },
+        "/product/association": {
+            "get": {
+                "tags": [
+                    "Product-Association"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Product ID",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "type",
+                        "description": "",
+                        "schema": {
+                            "enum": [
+                                "Component",
+                                "Complement",
+                                "Incompatible"
+                            ],
+                            "type": "string"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "associatedWith",
+                        "description": "Parent Product",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "associated",
+                        "description": "Sub Product of Parent Product",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "quantity",
+                        "description": "Amount of a Specific Product",
+                        "schema": {
+                            "maxLength": 11,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ProductAssociation"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Fetch Product Association"
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductAssociationUpdate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Product-Association"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductAssociation"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Update Product Association"
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductAssociationCreate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Product-Association"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductAssociation"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Create New Product Association"
+            }
+        },
+        "/product/classification": {
+            "get": {
+                "tags": [
+                    "Product-Classification"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Classification ID",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "productId",
+                        "description": "Product ID",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "categoryId",
+                        "description": "Category ID",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "isPrimary",
+                        "description": "Main Catagory <1> / Sub Category <0>",
+                        "schema": {
+                            "maxLength": 4,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ProductClassification"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Fetch Product Classification"
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductClassificationUpdate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Product-Classification"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductClassification"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Update Product Classification"
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductClassificationCreate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Product-Classification"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductClassification"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Create New Product Classification"
+            }
+        },
+        "/category": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Category ID",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "name",
+                        "description": "Category Name",
+                        "schema": {
+                            "maxLength": 255,
+                            "type": "string"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "description",
+                        "description": "Category Details",
+                        "schema": {
+                            "maxLength": 1024,
+                            "type": "string"
+                        },
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Category"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Fetch Category"
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CategoryUpdate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Category"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Category"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Update Category"
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CategoryCreate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Category"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Category"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Create New Category"
+            }
+        },
+        "/category/rollup": {
+            "description": "# General Response format\nEvery API will return JSON object with following properties\n* status - \n__An Integer value represents HTTP status code.__\n* title - \n__A human readable text summarizes the response__\n* details - \n__A human readable text elaborates the response__\n* timestamp - \n__An Integer value denoting Server's response timestamp in Epoch-Seconds.__\n* data - \n__An optional Array structure containing additional data__\n\n### Example\n```json\n{\n  \"status\": 200,\n  \"title\": \"Success\",\n  \"details\": \"Success\",\n  \"timestamp\": 1552233104,\n  \"data\": [\n    {\n        \"id\": \"913186e3-58ff-4b0a-8670-91c9d15ad123\",\n        \"code\": \"92277026-e882-4286-9244-6c7bbc773944\",\n        \"name\": \"Accounts Receivable\",\n        \"description\": \"Accounts Receivable\",\n        \"generalLedgerAccountId\": \"1\",\n        \"status\": 1,\n        \"enablePayments\": 0,\n        \"systemAccount\": \"DEBTORS\",\n        \"debitBalance\": \"0.000000\",\n        \"creditBalance\": \"0.000000\",\n        \"netBalance\": \"0.000000\",\n        \"createdBy\": \"admin\",\n        \"createdAt\": \"2020-02-19T07:23:49.000Z\"\n    }\n  ]\n}\n",
+            "servers": [
+                {
+                    "url": "http://localhost/api",
+                    "description": ""
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Category-Rollup"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Category ID",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "partOf",
+                        "description": "Sub Category",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "madeUpOf",
+                        "description": "Parent Category",
+                        "schema": {
+                            "format": "int64",
+                            "maxLength": 20,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "status",
+                        "description": "Availability YES <1> / NO <0>",
+                        "schema": {
+                            "maxLength": 1024,
+                            "type": "integer"
+                        },
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/CategoryRollup"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Fetch Category Rollup"
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CategoryRollupUpdate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Category-Rollup"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CategoryRollup"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Update Category Rollup"
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CategoryRollupCreate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "Category-Rollup"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CategoryRollup"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Create New Category Rollup"
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Product": {
+                "title": "Root Type for Product",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Product Id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "Product Name",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Product Details",
+                        "type": "string"
+                    },
+                    "status": {
+                        "format": "int32",
+                        "description": "Availability check",
+                        "type": "integer"
+                    },
+                    "introduceAt": {
+                        "format": "date-time",
+                        "description": "Available From",
+                        "type": "string"
+                    },
+                    "salesDiscontinueAt": {
+                        "format": "date-time",
+                        "description": "Available Till",
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "description": "Manufacturer",
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "updatedBy": {
+                        "description": "Manufacturer",
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "name": "OnePlus 6",
+                    "description": "Smart phone",
+                    "status": 1,
+                    "introduceAt": "2020-02-19T07:23:49.000Z",
+                    "salesDiscontinueAt": "2020-02-19T07:23:49.000Z",
+                    "createdBy": "admin",
+                    "createdAt": "2020-02-19T07:23:49.000Z",
+                    "updatedBy": "admin",
+                    "updatedAt": "2020-02-19T07:23:49.000Z"
+                }
+            },
+            "ProductAssociation": {
+                "title": "Root Type for ProductAssociation",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Product ID",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "enum": [
+                            "Component",
+                            "Complement",
+                            "Incompatible"
+                        ],
+                        "type": "string"
+                    },
+                    "associatedWith": {
+                        "format": "int64",
+                        "description": "Parent Product",
+                        "type": "integer"
+                    },
+                    "associated": {
+                        "format": "int64",
+                        "description": "Child Product",
+                        "type": "integer"
+                    },
+                    "quantity:": {
+                        "format": "int32",
+                        "description": "Amount of a Specific Product",
+                        "type": "integer"
+                    },
+                    "fromDate": {
+                        "format": "date-time",
+                        "description": "Available From",
+                        "type": "string"
+                    },
+                    "thruDate": {
+                        "format": "date-time",
+                        "description": "Available Till",
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "description": "Manufacturer",
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "updatedBy": {
+                        "description": "Manufacturer",
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "type": "Component",
+                    "associatedWith": 1,
+                    "associated": 1,
+                    "quantity:": 5,
+                    "fromDate": "2020-02-19T07:23:49.000Z",
+                    "thruDate": "2020-02-19T07:23:49.000Z",
+                    "createdBy": "admin",
+                    "createdAt": "2020-02-19T07:23:49.000Z",
+                    "updatedBy": "admin",
+                    "updatedAt": "2020-02-19T07:23:49.000Z"
+                }
+            },
+            "CategoryRollup": {
+                "title": "Root Type for CategoryRollup",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Category ID",
+                        "type": "integer"
+                    },
+                    "partOf": {
+                        "format": "int64",
+                        "description": "Child of a parent Product",
+                        "type": "integer"
+                    },
+                    "madeUpOf": {
+                        "format": "int64",
+                        "description": "List of Sub Products",
+                        "type": "integer"
+                    },
+                    "status": {
+                        "format": "int32",
+                        "description": "Availability YES <1> / NO <0>",
+                        "type": "integer"
+                    },
+                    "createdBy": {
+                        "description": "Admin / System Handler",
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "updatedBy": {
+                        "description": "Admin / System Handler",
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "partOf": 1,
+                    "madeUpOf": 10,
+                    "status": 1,
+                    "createdBy": "admin",
+                    "createdAt": "2020-02-19T07:23:49.000Z",
+                    "updatedBy": "admin",
+                    "updatedAt": "2020-02-19T07:23:49.000Z"
+                }
+            },
+            "Category": {
+                "title": "Root Type for Category",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Category Id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "Category Name",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Category Details",
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "description": "Admin/ System Handler",
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "updatedBy": {
+                        "description": "Admin / System Handler",
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 56,
+                    "name": "some text",
+                    "description": "some text",
+                    "createdBy": "admin",
+                    "createdAt": "2020-02-19T07:23:49.000Z",
+                    "updatedBy": "admin",
+                    "updatedAt": "2020-02-19T07:23:49.000Z"
+                }
+            },
+            "ProductClassification": {
+                "title": "Root Type for CategoryClassification",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Classification ID",
+                        "type": "integer"
+                    },
+                    "categoryId": {
+                        "format": "int64",
+                        "description": "Category ID",
+                        "type": "integer"
+                    },
+                    "productId": {
+                        "format": "int64",
+                        "description": "Product ID",
+                        "type": "integer"
+                    },
+                    "fromDate": {
+                        "format": "date-time",
+                        "description": "Available From",
+                        "type": "string"
+                    },
+                    "thruDate": {
+                        "format": "date-time",
+                        "description": "Available Till",
+                        "type": "string"
+                    },
+                    "isPrimary": {
+                        "format": "int32",
+                        "description": "Main Category <1> / Sub Category <0>",
+                        "type": "integer"
+                    },
+                    "createdBy": {
+                        "description": "Admin",
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "updatedBy": {
+                        "description": "Admin",
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 56,
+                    "categoryId": 2,
+                    "productId": 3,
+                    "fromDate": "2020-02-19T07:23:49.000Z",
+                    "thruDate": "2020-02-19T07:23:49.000Z",
+                    "isPrimary": 1,
+                    "createdBy": "admin",
+                    "createdAt": "2020-02-19T07:23:49.000Z",
+                    "updatedBy": "admin",
+                    "updatedAt": "2020-02-19T07:23:49.000Z"
+                }
+            },
+            "ProductCreate": {
+                "title": "Root Type for ProductCreate",
+                "description": "",
+                "required": [
+                    "createdBy",
+                    "name"
+                ],
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "Product Name",
+                        "maxLength": 255,
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Product Details",
+                        "maxLength": 1024,
+                        "type": "string"
+                    },
+                    "introduceAt": {
+                        "format": "date-time",
+                        "description": "Availability From Date",
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "description": "Manufecturer",
+                        "maxLength": 255,
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "name": "random",
+                    "description": "sample",
+                    "introduceAt": "2020-02-25T06:38:11.000Z",
+                    "createdBy": "admin"
+                }
+            },
+            "ProductUpdate": {
+                "title": "Root Type for ProductUpdate",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Product ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "description": {
+                        "description": "Product Details",
+                        "maxLength": 1024,
+                        "type": "string"
+                    },
+                    "status": {
+                        "format": "int32",
+                        "description": "Availability <YES> 1 / <NO> 0",
+                        "maxLength": 4,
+                        "type": "integer"
+                    },
+                    "updatedBy": {
+                        "description": "Manufacturer ",
+                        "maxLength": 255,
+                        "type": "string"
+                    },
+                    "salesDiscontinueAt": {
+                        "format": "date-time",
+                        "description": "Market-out Date",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "description": "updated",
+                    "status": 1,
+                    "updatedBy": "admin"
+                }
+            },
+            "ProductAssociationCreate": {
+                "title": "Root Type for productAssociationCreate",
+                "description": "",
+                "required": [
+                    "associated",
+                    "associatedWith",
+                    "createdBy",
+                    "quantity",
+                    "type",
+                    "id"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int32",
+                        "description": "Product ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "type": {
+                        "enum": [
+                            "Component",
+                            "Complement",
+                            "Incompatible"
+                        ],
+                        "type": "string"
+                    },
+                    "associatedWith": {
+                        "format": "int64",
+                        "description": "Parent Product",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "associated": {
+                        "format": "int64",
+                        "description": "Sub Product of a Parent Product",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "quantity": {
+                        "description": "Amount of a Specific Product",
+                        "maxLength": 11,
+                        "type": "integer"
+                    },
+                    "fromDate": {
+                        "format": "date-time",
+                        "description": "Available From",
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "description": "Manufacturer",
+                        "maxLength": 255,
+                        "type": "string"
+                    },
+                    "thruDate": {
+                        "format": "date-time",
+                        "description": "Available till",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "type": "Component",
+                    "associatedWith": 1,
+                    "associated": 3,
+                    "quantity": 4,
+                    "fromDate": "2020-02-25T06:38:11.000Z",
+                    "thruDate": "2020-02-25T06:38:11.000Z",
+                    "createdBy": "admin"
+                }
+            },
+            "ProductAssociationUpdate": {
+                "title": "Root Type for productAssociationUpdate",
+                "description": "",
+                "required": [
+                    "id",
+                    "updatedBy"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Product ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "quantity": {
+                        "format": "int32",
+                        "description": "Amount of a Specific Product",
+                        "maxLength": 11,
+                        "type": "integer"
+                    },
+                    "associatedWith": {
+                        "format": "int64",
+                        "description": "Parent Product",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "associated": {
+                        "format": "int64",
+                        "description": "Child Product of a Parent Product",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "updatedBy": {
+                        "description": "Manufacturer",
+                        "maxLength": 255,
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "quantity": 1,
+                    "associatedWith": 2,
+                    "associated": 3,
+                    "fromDate": "2020-02-25T06:38:11.000Z",
+                    "thruDate": "2020-02-25T06:38:11.000Z",
+                    "updatedBy": "admin"
+                }
+            },
+            "ProductClassificationCreate": {
+                "title": "Root Type for ProdctClassificationCreate",
+                "description": "",
+                "required": [
+                    "categoryId",
+                    "isPrimary",
+                    "productId"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Classification ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "productId": {
+                        "format": "int64",
+                        "description": "Product ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "categoryId": {
+                        "format": "int64",
+                        "description": "Category ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "isPrimary": {
+                        "description": "Main Category <1> / Sub Category <0>",
+                        "maxLength": 4,
+                        "type": "integer"
+                    },
+                    "createdBy": {
+                        "description": "Admin/System Handler",
+                        "maxLength": 255,
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "productId": 1,
+                    "categoryId": 2,
+                    "isPrimary": 0,
+                    "createdBy": "admin"
+                }
+            },
+            "ProductClassificationUpdate": {
+                "title": "Root Type for ProductClassificationUpdate",
+                "description": "",
+                "required": [
+                    "isPrimary",
+                    "productId",
+                    "categoryId"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Classification ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "productId": {
+                        "format": "int64",
+                        "description": "Product ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "categoryId": {
+                        "format": "int64",
+                        "description": "Category ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "isPrimary": {
+                        "description": "Main Category <1> / Sub Category <0>",
+                        "maxLength": 4,
+                        "type": "integer"
+                    },
+                    "updatedBy": {
+                        "description": "Admin/ System Handler",
+                        "maxLength": 255,
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "productId": 1,
+                    "categoryId": 3,
+                    "isPrimary": 1,
+                    "updatedBy": "admin"
+                }
+            },
+            "CategoryCreate": {
+                "title": "Root Type for categoryCreate",
+                "description": "",
+                "required": [
+                    "createdBy",
+                    "id",
+                    "name"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Category ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "Category Name",
+                        "maxLength": 255,
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Category Details",
+                        "maxLength": 1024,
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "description": "Admin/ System Handler",
+                        "maxLength": 255,
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "name": "sample",
+                    "description": "creating",
+                    "createdBy": "admin"
+                }
+            },
+            "CategoryUpdate": {
+                "title": "Root Type for categoryUpdate",
+                "description": "",
+                "required": [
+                    "id",
+                    "updatedBy"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Category ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "Category Name",
+                        "maxLength": 255,
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Category Details",
+                        "maxLength": 1024,
+                        "type": "string"
+                    },
+                    "updatedBy": {
+                        "description": "Admin / System Handler",
+                        "maxLength": 255,
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "name": "sample",
+                    "description": "updating",
+                    "updatedBy": "admin"
+                }
+            },
+            "CategoryRollupCreate": {
+                "title": "Root Type for categoryRollupCreate",
+                "description": "",
+                "required": [
+                    "id",
+                    "madeUpOf",
+                    "createdBy",
+                    "partOf",
+                    "status"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Category ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "partOf": {
+                        "format": "int64",
+                        "description": "Sub Category",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "madeUpOf": {
+                        "format": "int64",
+                        "description": "Parent Category",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "status": {
+                        "description": "Availability YES <1> / NO <0>",
+                        "maxLength": 4,
+                        "type": "integer"
+                    },
+                    "createdBy": {
+                        "description": "Admin/ System Handler",
+                        "maxLength": 255,
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "partOf": 2,
+                    "madeUpOf": 3,
+                    "status": 1,
+                    "createdBy": "admin"
+                }
+            },
+            "CategoryRollupUpdate": {
+                "title": "Root Type for categoryRollupUpdate",
+                "description": "",
+                "required": [
+                    "id",
+                    "updatedBy"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int64",
+                        "description": "Category ID",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "partOf": {
+                        "format": "int32",
+                        "description": "Sub Category",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "madeUpOf": {
+                        "format": "int32",
+                        "description": "Parent Category",
+                        "maxLength": 20,
+                        "type": "integer"
+                    },
+                    "status": {
+                        "format": "int32",
+                        "description": "Availability YES <1> / NO <0>",
+                        "maxLength": 4,
+                        "type": "integer"
+                    },
+                    "updatedBy": {
+                        "description": "Admin/ System Handler",
+                        "maxLength": 255,
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": 1,
+                    "partOf": 2,
+                    "madeUpOf": 3,
+                    "status": 1,
+                    "updatedBy": "admin"
+                }
+            }
+        }
+    }
+}
