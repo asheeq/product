@@ -17,7 +17,7 @@ module.exports = async () => {
   const db = require('./db/models');
 
   app.use('/api',
-
+    require('./routes/category')(require('./lib/category')(db))
   );
 
   return app;
