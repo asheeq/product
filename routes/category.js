@@ -13,7 +13,7 @@ module.exports = (category) => {
     .get('/category', function (req, res, next) {
       req.body = req.query;
       next();
-    }, validationHandler(vs['FetchCategory']),
+    }, validationHandler(vs['CategoryFetch']),
     async function (req, res, next) {
       try {
         res.data = await category.fetchCategory(req.body);
@@ -22,7 +22,7 @@ module.exports = (category) => {
           responseHandler(err, req, res);
       }
     })
-    .post('/category', validationHandler(vs['CreateCategory']),
+    .post('/category', validationHandler(vs['CategoryCreate']),
       async function (req, res, next) {
         try {
           res.data = await productCategory.createCategory(req.body);
@@ -31,7 +31,7 @@ module.exports = (category) => {
           responseHandler(err, req, res);
         }
     })
-    .put('/category', validationHandler(vs['UpdateCategory']),
+    .put('/category', validationHandler(vs['CategoryUpdate']),
       async function (req, res, next) {
         try {
           res.data = await productCategory.updateCategory(req.body);
