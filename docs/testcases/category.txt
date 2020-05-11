@@ -8,78 +8,47 @@ Response: {
     "code": 0,
     "title": "Success",
     "details": "Success",
-    "timestamp": 15891802814,
+    "timestamp": 15892091371,
     "data": [
         {
             "id": "1",
-            "name": "sample",
-            "description": "creating",
+            "name": "sampleName",
+            "description": "sampleDescription",
             "createdBy": "admin",
             "updatedBy": null,
-            "createdAt": "2020-05-11T06:39:26.000Z",
-            "updatedAt": "2020-05-11T06:39:26.000Z"
+            "createdAt": "2020-05-11T14:58:22.000Z",
+            "updatedAt": "2020-05-11T14:58:22.000Z"
         },
         {
             "id": "2",
-            "name": "sample2",
-            "description": "creating",
+            "name": "sampleName2",
+            "description": "sampleDescription2",
             "createdBy": "admin",
             "updatedBy": null,
-            "createdAt": "2020-05-11T06:40:48.000Z",
-            "updatedAt": "2020-05-11T06:40:48.000Z"
-        },
-        {
-            "id": "3",
-            "name": "sampleN",
-            "description": "creating",
-            "createdBy": "admin",
-            "updatedBy": null,
-            "createdAt": "2020-05-11T06:42:29.000Z",
-            "updatedAt": "2020-05-11T06:42:29.000Z"
+            "createdAt": "2020-05-11T14:58:45.000Z",
+            "updatedAt": "2020-05-11T14:58:45.000Z"
         }
     ]
 }
 
 2.
-Fetch categories with id param
-Request: ?id=1
+Fetch categories with name param
+Request: ?name=sampleName
 Response: {
     "status": 200,
     "code": 0,
     "title": "Success",
     "details": "Success",
-    "timestamp": 15891807865,
+    "timestamp": 15892092727,
     "data": [
         {
             "id": "1",
-            "name": "sample",
-            "description": "creating",
+            "name": "sampleName",
+            "description": "sampleDescription",
             "createdBy": "admin",
             "updatedBy": null,
-            "createdAt": "2020-05-11T06:39:26.000Z",
-            "updatedAt": "2020-05-11T06:39:26.000Z"
-        }
-    ]
-}
-
-3.
-Fetch categories with name param
-Request: ?name=sample
-Response: {
-    "status": 200,
-    "code": 0,
-    "title": "Success",
-    "details": "Success",
-    "timestamp": 15891941658,
-    "data": [
-        {
-            "id": "1",
-            "name": "sample",
-            "description": "updating",
-            "createdBy": "admin",
-            "updatedBy": "admin",
-            "createdAt": "2020-05-11T06:39:26.000Z",
-            "updatedAt": "2020-05-11T07:39:24.000Z"
+            "createdAt": "2020-05-11T14:58:22.000Z",
+            "updatedAt": "2020-05-11T14:58:22.000Z"
         }
     ]
 }
@@ -89,9 +58,8 @@ POST /category
 1.
 Create new category
 Request: {
-  "id": 1,
-  "name": "sample",
-  "description": "creating",
+  "name": "sampleName2",
+  "description": "sampleDescription2",
   "createdBy": "admin"
 }
 Response: {
@@ -99,16 +67,16 @@ Response: {
     "code": 0,
     "title": "Success",
     "details": "Success",
-    "timestamp": 15891808968,
+    "timestamp": 15892091258,
     "data": [
         {
-            "id": "1",
-            "name": "sample",
-            "description": "creating",
+            "id": "2",
+            "name": "sampleName2",
+            "description": "sampleDescription2",
             "createdBy": "admin",
             "updatedBy": null,
-            "createdAt": "2020-05-11T07:08:16.000Z",
-            "updatedAt": "2020-05-11T07:08:16.000Z"
+            "createdAt": "2020-05-11T14:58:45.000Z",
+            "updatedAt": "2020-05-11T14:58:45.000Z"
         }
     ]
 }

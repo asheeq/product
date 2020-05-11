@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.BIGINT.UNSIGNED,
       allowNull: false,
-      primaryKey: true,
-      defaultValue: DataTypes.UUIDV4
+      autoIncrement: true,
+      primaryKey: true
     },
     name: {
       type: DataTypes.STRING,
@@ -29,7 +29,6 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   ProductCategory.associate = function(models) {
-    ProductCategory.hasMany(models['ProductCategoryRollup']);
   };
 
   return ProductCategory;

@@ -13,17 +13,6 @@
                 ],
                 "parameters": [
                     {
-                        "name": "id",
-                        "description": "Product ID",
-                        "schema": {
-                            "format": "int64",
-                            "maxLength": 20,
-                            "type": "integer"
-                        },
-                        "in": "query",
-                        "required": false
-                    },
-                    {
                         "name": "name",
                         "description": "Product Name",
                         "schema": {
@@ -114,16 +103,6 @@
                 ],
                 "parameters": [
                     {
-                        "name": "id",
-                        "description": "Product ID",
-                        "schema": {
-                            "format": "int64",
-                            "maxLength": 20,
-                            "type": "integer"
-                        },
-                        "in": "query"
-                    },
-                    {
                         "name": "type",
                         "description": "",
                         "schema": {
@@ -164,6 +143,15 @@
                             "type": "integer"
                         },
                         "in": "query"
+                    },
+                    {
+                        "name": "name",
+                        "description": "Name of the Product",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": false
                     }
                 ],
                 "responses": {
@@ -246,16 +234,6 @@
                     "Product-Classification"
                 ],
                 "parameters": [
-                    {
-                        "name": "id",
-                        "description": "Classification ID",
-                        "schema": {
-                            "format": "int64",
-                            "maxLength": 20,
-                            "type": "integer"
-                        },
-                        "in": "query"
-                    },
                     {
                         "name": "productId",
                         "description": "Product ID",
@@ -367,16 +345,6 @@
                 ],
                 "parameters": [
                     {
-                        "name": "id",
-                        "description": "Category ID",
-                        "schema": {
-                            "format": "int64",
-                            "maxLength": 20,
-                            "type": "integer"
-                        },
-                        "in": "query"
-                    },
-                    {
                         "name": "name",
                         "description": "Category Name",
                         "schema": {
@@ -482,16 +450,6 @@
                     "Category-Rollup"
                 ],
                 "parameters": [
-                    {
-                        "name": "id",
-                        "description": "Category ID",
-                        "schema": {
-                            "format": "int64",
-                            "maxLength": 20,
-                            "type": "integer"
-                        },
-                        "in": "query"
-                    },
                     {
                         "name": "partOf",
                         "description": "Sub Category",
@@ -741,11 +699,6 @@
                 "description": "",
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Category ID",
-                        "type": "integer"
-                    },
                     "partOf": {
                         "format": "int64",
                         "description": "Child of a parent Product",
@@ -776,6 +729,11 @@
                     "updatedAt": {
                         "format": "date-time",
                         "type": "string"
+                    },
+                    "id": {
+                        "format": "int64",
+                        "description": "Category Rollup Id",
+                        "type": "integer"
                     }
                 },
                 "example": {
@@ -939,14 +897,12 @@
             "ProductUpdate": {
                 "title": "Root Type for ProductUpdate",
                 "description": "",
+                "required": [
+                    "updatedBy",
+                    "name"
+                ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Product ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "description": {
                         "description": "Product Details",
                         "maxLength": 1024,
@@ -967,6 +923,10 @@
                         "format": "date-time",
                         "description": "Market-out Date",
                         "type": "string"
+                    },
+                    "name": {
+                        "description": "Product name",
+                        "type": "string"
                     }
                 },
                 "example": {
@@ -984,17 +944,10 @@
                     "associatedWith",
                     "createdBy",
                     "quantity",
-                    "type",
-                    "id"
+                    "type"
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int32",
-                        "description": "Product ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "type": {
                         "enum": [
                             "Component",
@@ -1051,17 +1004,10 @@
                 "title": "Root Type for productAssociationUpdate",
                 "description": "",
                 "required": [
-                    "id",
                     "updatedBy"
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Product ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "quantity": {
                         "format": "int32",
                         "description": "Amount of a Specific Product",
@@ -1100,18 +1046,11 @@
                 "title": "Root Type for ProdctClassificationCreate",
                 "description": "",
                 "required": [
-                    "categoryId",
-                    "isPrimary",
-                    "productId"
+                    "createdBy",
+                    "isPrimary"
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Classification ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "productId": {
                         "format": "int64",
                         "description": "Product ID",
@@ -1147,18 +1086,10 @@
                 "title": "Root Type for ProductClassificationUpdate",
                 "description": "",
                 "required": [
-                    "isPrimary",
-                    "productId",
-                    "categoryId"
+                    "updatedBy"
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Classification ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "productId": {
                         "format": "int64",
                         "description": "Product ID",
@@ -1195,17 +1126,10 @@
                 "description": "",
                 "required": [
                     "createdBy",
-                    "id",
                     "name"
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Category ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "name": {
                         "description": "Category Name",
                         "maxLength": 255,
@@ -1233,17 +1157,11 @@
                 "title": "Root Type for categoryUpdate",
                 "description": "",
                 "required": [
-                    "id",
-                    "updatedBy"
+                    "updatedBy",
+                    "name"
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Category ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "name": {
                         "description": "Category Name",
                         "maxLength": 255,
@@ -1271,7 +1189,6 @@
                 "title": "Root Type for categoryRollupCreate",
                 "description": "",
                 "required": [
-                    "id",
                     "madeUpOf",
                     "createdBy",
                     "partOf",
@@ -1279,12 +1196,6 @@
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Category ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "partOf": {
                         "format": "int64",
                         "description": "Sub Category",
@@ -1320,17 +1231,10 @@
                 "title": "Root Type for categoryRollupUpdate",
                 "description": "",
                 "required": [
-                    "id",
                     "updatedBy"
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "format": "int64",
-                        "description": "Category ID",
-                        "maxLength": 20,
-                        "type": "integer"
-                    },
                     "partOf": {
                         "format": "int32",
                         "description": "Sub Category",
