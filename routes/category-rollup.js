@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (category) => {
+module.exports = (categoryRollup) => {
   const express = require('express');
   const router = express.Router();
 
@@ -10,31 +10,31 @@ module.exports = (category) => {
   const responseHandler = require('../utils/response-handler');
 
   router
-    .get('/category', function (req, res, next) {
+    .get('/category/rollup', function (req, res, next) {
       req.body = req.query;
       next();
-    }, validationHandler(vs['CategoryFetch']),
+    }, validationHandler(vs['CategoryRollupFetch']),
     async function (req, res, next) {
       try {
-        res.data = await category.fetchCategory(req.body);
+        res.data = await categoryRollup.fetchCategoryRollup(req.body);
         responseHandler(null, req, res);
       } catch (err) {
           responseHandler(err, req, res);
       }
     })
-    .post('/category', validationHandler(vs['CategoryCreate']),
+    .post('/category/rollup', validationHandler(vs['CategoryRollupCreate']),
       async function (req, res, next) {
         try {
-          res.data = await category.createCategory(req.body);
+          res.data = await categoryRollup.createCategoryRollup(req.body);
           responseHandler(null, req, res);
         } catch (err) {
           responseHandler(err, req, res);
         }
     })
-    .put('/category', validationHandler(vs['CategoryUpdate']),
+    .put('/category/rollup', validationHandler(vs['CategoryRollupUpdate']),
       async function (req, res, next) {
         try {
-          res.data = await category.updateCategory(req.body);
+          res.data = await categoryRollup.updateCategoryRollup(req.body);
           responseHandler(null, req, res);
         } catch (err) {
           responseHandler(err, req, res);

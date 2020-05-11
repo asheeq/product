@@ -17,7 +17,8 @@ module.exports = async () => {
   const db = require('./db/models');
 
   app.use('/api',
-    require('./routes/category')(require('./lib/category')(db))
+    require('./routes/category')(require('./lib/category')(db)),
+    require('./routes/category-rollup')(require('./lib/category-rollup')(db))
   );
 
   return app;

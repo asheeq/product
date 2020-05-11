@@ -3,10 +3,10 @@
 module.exports = (sequelize, DataTypes) => {
   const ProductCategoryRollup = sequelize.define('ProductCategoryRollup', {
     id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    allowNull: false,
-    primaryKey: true,
-    defaultValue: DataTypes.UUIDV4
+      type: DataTypes.BIGINT.UNSIGNED,
+      allowNull: false,
+      primaryKey: true,
+      defaultValue: DataTypes.UUIDV4
     },
     partOf: {
       type: DataTypes.BIGINT.UNSIGNED,
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     }
   }, {
-    tableName: 'product_category_classification'
+    tableName: 'product_category_rollup'
   });
 
   ProductCategoryRollup.associate = function(models) {

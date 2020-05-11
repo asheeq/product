@@ -1,0 +1,143 @@
+GET /category
+
+1.
+Fetch all categories
+Request:
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15891802814,
+    "data": [
+        {
+            "id": "1",
+            "name": "sample",
+            "description": "creating",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-11T06:39:26.000Z",
+            "updatedAt": "2020-05-11T06:39:26.000Z"
+        },
+        {
+            "id": "2",
+            "name": "sample2",
+            "description": "creating",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-11T06:40:48.000Z",
+            "updatedAt": "2020-05-11T06:40:48.000Z"
+        },
+        {
+            "id": "3",
+            "name": "sampleN",
+            "description": "creating",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-11T06:42:29.000Z",
+            "updatedAt": "2020-05-11T06:42:29.000Z"
+        }
+    ]
+}
+
+2.
+Fetch categories with id param
+Request: ?id=1
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15891807865,
+    "data": [
+        {
+            "id": "1",
+            "name": "sample",
+            "description": "creating",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-11T06:39:26.000Z",
+            "updatedAt": "2020-05-11T06:39:26.000Z"
+        }
+    ]
+}
+
+3.
+Fetch categories with name param
+Request: ?name=sample
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15891941658,
+    "data": [
+        {
+            "id": "1",
+            "name": "sample",
+            "description": "updating",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-11T06:39:26.000Z",
+            "updatedAt": "2020-05-11T07:39:24.000Z"
+        }
+    ]
+}
+
+POST /category
+
+1.
+Create new category
+Request: {
+  "id": 1,
+  "name": "sample",
+  "description": "creating",
+  "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15891808968,
+    "data": [
+        {
+            "id": "1",
+            "name": "sample",
+            "description": "creating",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-11T07:08:16.000Z",
+            "updatedAt": "2020-05-11T07:08:16.000Z"
+        }
+    ]
+}
+
+PUT /category
+
+1.
+Update a category
+Request: {
+  "id": 1,
+  "name": "sample",
+  "description": "updating",
+  "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15891827641,
+    "data": [
+        {
+            "id": "1",
+            "name": "sample",
+            "description": "updating",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-11T06:39:26.000Z",
+            "updatedAt": "2020-05-11T07:39:24.000Z"
+        }
+    ]
+}
