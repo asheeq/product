@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     quantity: {
-      type: DataTypes.INT,
+      type: DataTypes.BIGINT ,
       allowNull: false,
       defaultValue: 1
     },
