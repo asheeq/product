@@ -111,6 +111,30 @@ Response: {
     ]
 }
 
+4.
+Fetch with non-existent id param
+Request: ?id=20
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15892741272,
+    "data": []
+}
+
+5.
+Fetch with non-existent name param
+Request: ?name=sampleName20
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15892742078,
+    "data": []
+}
+
 POST /categories
 
 1.
@@ -137,6 +161,46 @@ Response: {
             "updatedAt": "2020-05-12T07:26:17.000Z"
         }
     ]
+}
+
+2.
+Create category without description
+Request:{
+    "name": "sampleName10",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15892745222,
+    "data": [
+        {
+            "id": "10",
+            "name": "sampleName10",
+            "description": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-12T09:08:42.000Z",
+            "updatedAt": "2020-05-12T09:08:42.000Z"
+        }
+    ]
+}
+
+3.
+Duplication of name throws exception
+Request: {
+    "name": "sampleName8",
+    "description": "sampleDescription",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 1,
+    "title": "Bad Request",
+    "details": "Duplicate Category name",
+    "timestamp": 15892743220
 }
 
 PUT /categories
@@ -218,4 +282,49 @@ Response: {
             "updatedAt": "2020-05-12T07:33:57.000Z"
         }
     ]
+}
+
+4.
+Update a category with non-existent id throws invalid category id exception
+Request: {
+    "id": "20"
+    "name": "sampleName3",
+    "description": "descUpdatedFor3",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 3,
+    "title": "Bad Request",
+    "details": "Invalid Category Id",
+    "timestamp": 15892747062
+}
+
+5.
+Update a category with duplicate name throws duplicate category name exception
+Request: {
+    "id": "3"
+    "name": "sampleName2",
+    "description": "descUpdatedFor3",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 1,
+    "title": "Bad Request",
+    "details": "Duplicate Category name",
+    "timestamp": 15892748479
+}
+
+6. updating without changing either name or description throws exception
+Request: {
+    "id": "3"
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 1,
+    "title": "Bad Request",
+    "details": "\"value\" must contain at least one of [name, description]",
+    "timestamp": 15892749862
 }
