@@ -10,36 +10,36 @@ module.exports = (categoryRollup) => {
   const responseHandler = require('../utils/response-handler');
 
   router
-    .get('/category/rollup', function (req, res, next) {
+    .get('/categories/rollup', function (req, res, next) {
       req.body = req.query;
       next();
     }, validationHandler(vs['CategoryRollupFetch']),
-    async function (req, res, next) {
+    async function (req, res) {
       try {
         res.data = await categoryRollup.fetchCategoryRollup(req.body);
         responseHandler(null, req, res);
       } catch (err) {
-          responseHandler(err, req, res);
+        responseHandler(err, req, res);
       }
     })
-    .post('/category/rollup', validationHandler(vs['CategoryRollupCreate']),
-      async function (req, res, next) {
+    .post('/categories/rollup', validationHandler(vs['CategoryRollupCreate']),
+      async function (req, res) {
         try {
           res.data = await categoryRollup.createCategoryRollup(req.body);
           responseHandler(null, req, res);
         } catch (err) {
           responseHandler(err, req, res);
         }
-    })
-    .put('/category/rollup', validationHandler(vs['CategoryRollupUpdate']),
-      async function (req, res, next) {
+      })
+    .put('/categories/rollup', validationHandler(vs['CategoryRollupUpdate']),
+      async function (req, res) {
         try {
           res.data = await categoryRollup.updateCategoryRollup(req.body);
           responseHandler(null, req, res);
         } catch (err) {
           responseHandler(err, req, res);
         }
-    });
+      });
 
   return router;
 };

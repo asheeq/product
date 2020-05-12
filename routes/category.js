@@ -14,32 +14,32 @@ module.exports = (category) => {
       req.body = req.query;
       next();
     }, validationHandler(vs['CategoryFetch']),
-    async function (req, res, next) {
+    async function (req, res) {
       try {
         res.data = await category.fetchCategories(req.body);
         responseHandler(null, req, res);
       } catch (err) {
-          responseHandler(err, req, res);
+        responseHandler(err, req, res);
       }
     })
     .post('/categories', validationHandler(vs['CategoryCreate']),
-      async function (req, res, next) {
+      async function (req, res) {
         try {
           res.data = await category.createCategory(req.body);
           responseHandler(null, req, res);
         } catch (err) {
           responseHandler(err, req, res);
         }
-    })
+      })
     .put('/categories', validationHandler(vs['CategoryUpdate']),
-      async function (req, res, next) {
+      async function (req, res) {
         try {
           res.data = await category.updateCategory(req.body);
           responseHandler(null, req, res);
         } catch (err) {
           responseHandler(err, req, res);
         }
-    });
+      });
 
   return router;
 };
