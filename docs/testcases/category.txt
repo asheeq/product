@@ -1,4 +1,4 @@
-GET /category
+GET /categories
 
 1.
 Fetch all categories
@@ -8,7 +8,7 @@ Response: {
     "code": 0,
     "title": "Success",
     "details": "Success",
-    "timestamp": 15892091371,
+    "timestamp": 15892681445,
     "data": [
         {
             "id": "1",
@@ -22,80 +22,82 @@ Response: {
         {
             "id": "2",
             "name": "sampleName2",
-            "description": "sampleDescription2",
+            "description": "DescriptionUpdatedfor2",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-11T14:58:45.000Z",
+            "updatedAt": "2020-05-12T05:22:20.000Z"
+        },
+        {
+            "id": "3",
+            "name": "sampleName3",
+            "description": "descUpdated",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-11T15:29:15.000Z",
+            "updatedAt": "2020-05-12T07:00:15.000Z"
+        },
+        {
+            "id": "4",
+            "name": "sampleName4",
+            "description": "sampleDescription4",
             "createdBy": "admin",
             "updatedBy": null,
-            "createdAt": "2020-05-11T14:58:45.000Z",
-            "updatedAt": "2020-05-11T14:58:45.000Z"
+            "createdAt": "2020-05-11T16:00:04.000Z",
+            "updatedAt": "2020-05-11T16:00:04.000Z"
+        },
+        {
+            "id": "6",
+            "name": "sampleName5",
+            "description": "sampleDescription5",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-11T16:20:30.000Z",
+            "updatedAt": "2020-05-11T16:20:30.000Z"
+        },
+        {
+            "id": "7",
+            "name": "sampleName6",
+            "description": "sampleDescription6",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-11T16:21:56.000Z",
+            "updatedAt": "2020-05-11T16:21:56.000Z"
         }
     ]
 }
 
 2.
-Fetch categories with name param
-Request: ?name=sampleName
+Fetch a category with id param
+Request: ?id=4
 Response: {
     "status": 200,
     "code": 0,
     "title": "Success",
     "details": "Success",
-    "timestamp": 15892092727,
+    "timestamp": 15892681972,
     "data": [
         {
-            "id": "1",
-            "name": "sampleName",
-            "description": "sampleDescription",
+            "id": "4",
+            "name": "sampleName4",
+            "description": "sampleDescription4",
             "createdBy": "admin",
             "updatedBy": null,
-            "createdAt": "2020-05-11T14:58:22.000Z",
-            "updatedAt": "2020-05-11T14:58:22.000Z"
+            "createdAt": "2020-05-11T16:00:04.000Z",
+            "updatedAt": "2020-05-11T16:00:04.000Z"
         }
     ]
 }
 
-POST /category
-
-1.
-Create new category
-Request: {
-  "name": "sampleName2",
-  "description": "sampleDescription2",
-  "createdBy": "admin"
-}
+3.
+Fetch a category with name param
+Request: ?name=sampleName2
 Response: {
     "status": 200,
     "code": 0,
     "title": "Success",
     "details": "Success",
-    "timestamp": 15892091258,
-    "data": [
-        {
-            "id": "2",
-            "name": "sampleName2",
-            "description": "sampleDescription2",
-            "createdBy": "admin",
-            "updatedBy": null,
-            "createdAt": "2020-05-11T14:58:45.000Z",
-            "updatedAt": "2020-05-11T14:58:45.000Z"
-        }
-    ]
-}
-
-PUT /category
-
-1.
-Update a category
-Request: {
-  "name": "sampleName2",
-  "description": "DescriptionUpdatedfor2",
-  "updatedBy": "admin"
-}
-Response: {
-    "status": 200,
-    "code": 0,
-    "title": "Success",
-    "details": "Success",
-    "timestamp": 15892609409,
+    "timestamp": 15892682599,
     "data": [
         {
             "id": "2",
@@ -105,6 +107,115 @@ Response: {
             "updatedBy": "admin",
             "createdAt": "2020-05-11T14:58:45.000Z",
             "updatedAt": "2020-05-12T05:22:20.000Z"
+        }
+    ]
+}
+
+POST /categories
+
+1.
+Create a new category
+Request: {
+    "name": "sampleName8",
+    "description": "sampleDescription",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15892683771,
+    "data": [
+        {
+            "id": "8",
+            "name": "sampleName8",
+            "description": "sampleDescription",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-12T07:26:17.000Z",
+            "updatedAt": "2020-05-12T07:26:17.000Z"
+        }
+    ]
+}
+
+PUT /categories
+
+1.
+Update a category
+Request: {
+    "id": "3"
+    "name": "sampleName3",
+    "description": "descUpdatedFor3",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15892685462,
+    "data": [
+        {
+            "id": "3",
+            "name": "sampleName3",
+            "description": "descUpdatedFor3",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-11T15:29:15.000Z",
+            "updatedAt": "2020-05-12T07:29:06.000Z"
+        }
+    ]
+}
+
+2.
+Update a category name without description
+Request: {
+    "id": "3"
+    "name": "sampleName3updated",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15892687001,
+    "data": [
+        {
+            "id": "3",
+            "name": "sampleName3updated",
+            "description": "descUpdatedFor3",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-11T15:29:15.000Z",
+            "updatedAt": "2020-05-12T07:31:40.000Z"
+        }
+    ]
+}
+
+3.
+Update a category description
+Request: {
+    "id": "3"
+    "description": "newDescription",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15892688378,
+    "data": [
+        {
+            "id": "3",
+            "name": "sampleName3updated",
+            "description": "newDescription",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-11T15:29:15.000Z",
+            "updatedAt": "2020-05-12T07:33:57.000Z"
         }
     ]
 }
