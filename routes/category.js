@@ -10,19 +10,19 @@ module.exports = (category) => {
   const responseHandler = require('../utils/response-handler');
 
   router
-    .get('/category', function (req, res, next) {
+    .get('/categories', function (req, res, next) {
       req.body = req.query;
       next();
     }, validationHandler(vs['CategoryFetch']),
     async function (req, res, next) {
       try {
-        res.data = await category.fetchCategory(req.body);
+        res.data = await category.fetchCategories(req.body);
         responseHandler(null, req, res);
       } catch (err) {
           responseHandler(err, req, res);
       }
     })
-    .post('/category', validationHandler(vs['CategoryCreate']),
+    .post('/categories', validationHandler(vs['CategoryCreate']),
       async function (req, res, next) {
         try {
           res.data = await category.createCategory(req.body);
@@ -31,7 +31,7 @@ module.exports = (category) => {
           responseHandler(err, req, res);
         }
     })
-    .put('/category', validationHandler(vs['CategoryUpdate']),
+    .put('/categories', validationHandler(vs['CategoryUpdate']),
       async function (req, res, next) {
         try {
           res.data = await category.updateCategory(req.body);
