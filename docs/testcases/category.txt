@@ -316,7 +316,8 @@ Response: {
     "timestamp": 15892748479
 }
 
-6. updating without changing either name or description throws exception
+6. 
+Update without changing either name or description throws exception
 Request: {
     "id": "3"
     "updatedBy": "admin"
