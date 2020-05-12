@@ -86,9 +86,8 @@ PUT /category
 1.
 Update a category
 Request: {
-  "id": 1,
-  "name": "sample",
-  "description": "updating",
+  "name": "sampleName2",
+  "description": "DescriptionUpdatedfor2",
   "updatedBy": "admin"
 }
 Response: {
@@ -96,16 +95,16 @@ Response: {
     "code": 0,
     "title": "Success",
     "details": "Success",
-    "timestamp": 15891827641,
+    "timestamp": 15892609409,
     "data": [
         {
-            "id": "1",
-            "name": "sample",
-            "description": "updating",
+            "id": "2",
+            "name": "sampleName2",
+            "description": "DescriptionUpdatedfor2",
             "createdBy": "admin",
             "updatedBy": "admin",
-            "createdAt": "2020-05-11T06:39:26.000Z",
-            "updatedAt": "2020-05-11T07:39:24.000Z"
+            "createdAt": "2020-05-11T14:58:45.000Z",
+            "updatedAt": "2020-05-12T05:22:20.000Z"
         }
     ]
 }
