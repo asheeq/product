@@ -9,11 +9,9 @@ module.exports = (ValidationSchema, Joi) => {
     })),
     ValidationSchema.define('CategoryRollupUpdate', Joi.object().keys({
       id: Joi.number().integer().required(),
-      partOf: Joi.number().integer().optional(),
-      madeUpOf: Joi.number().integer().optional(),
-      status: Joi.number().integer().valid(0, 1).optional(),
+      status: Joi.number().integer().valid(0, 1).required(),
       updatedBy: Joi.string().max(255).required()
-    }).or('partOf','madeUpOf','status')),
+    })),
     ValidationSchema.define('CategoryRollupCreate', Joi.object().keys({
       partOf: Joi.number().integer().required(),
       madeUpOf: Joi.number().integer().required(),
