@@ -483,3 +483,18 @@ Response: {
     "details": "\"status\" is required",
     "timestamp": 15893649136
 }
+
+4. Updating status with any number than 0 or 1 throws exception
+Request: {
+    "id": "500",
+    "status": "10",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 4,
+    "title": "Bad Request",
+    "details": "\"status\" must be one of [0, 1]",
+    "timestamp": 15893651257
+}
+
