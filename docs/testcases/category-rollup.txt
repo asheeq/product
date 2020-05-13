@@ -1,0 +1,485 @@
+GET /categories/rollup
+
+1.
+Fetch all category rollup
+Request:
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893599917,
+    "data": [
+        {
+            "id": "1",
+            "partOf": "10",
+            "madeUpOf": "7",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-12T05:47:14.000Z",
+            "updatedAt": "2020-05-12T12:27:49.000Z"
+        },
+        {
+            "id": "2",
+            "partOf": "6",
+            "madeUpOf": "7",
+            "status": 0,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-12T05:48:02.000Z",
+            "updatedAt": "2020-05-13T08:29:01.000Z"
+        },
+        {
+            "id": "3",
+            "partOf": "7",
+            "madeUpOf": "8",
+            "status": 0,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-12T10:23:06.000Z",
+            "updatedAt": "2020-05-13T08:29:10.000Z"
+        },
+        {
+            "id": "6",
+            "partOf": "100",
+            "madeUpOf": "70",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T05:47:24.000Z",
+            "updatedAt": "2020-05-13T05:55:30.000Z"
+        },
+        {
+            "id": "10",
+            "partOf": "120",
+            "madeUpOf": "80",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T05:56:20.000Z",
+            "updatedAt": "2020-05-13T06:26:06.000Z"
+        },
+        {
+            "id": "20",
+            "partOf": "150",
+            "madeUpOf": "180",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T06:26:34.000Z",
+            "updatedAt": "2020-05-13T06:26:34.000Z"
+        },
+        {
+            "id": "21",
+            "partOf": "151",
+            "madeUpOf": "181",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T06:27:17.000Z",
+            "updatedAt": "2020-05-13T07:01:17.000Z"
+        },
+        {
+            "id": "27",
+            "partOf": "152",
+            "madeUpOf": "182",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T07:01:26.000Z",
+            "updatedAt": "2020-05-13T07:01:43.000Z"
+        },
+        {
+            "id": "30",
+            "partOf": "153",
+            "madeUpOf": "183",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T07:02:03.000Z",
+            "updatedAt": "2020-05-13T07:06:08.000Z"
+        },
+        {
+            "id": "32",
+            "partOf": "154",
+            "madeUpOf": "184",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T07:08:35.000Z",
+            "updatedAt": "2020-05-13T07:12:46.000Z"
+        },
+        {
+            "id": "36",
+            "partOf": "155",
+            "madeUpOf": "185",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-13T07:13:31.000Z",
+            "updatedAt": "2020-05-13T07:53:57.000Z"
+        },
+        {
+            "id": "42",
+            "partOf": "156",
+            "madeUpOf": "186",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-13T07:54:17.000Z",
+            "updatedAt": "2020-05-13T08:16:42.000Z"
+        },
+        {
+            "id": "48",
+            "partOf": "157",
+            "madeUpOf": "187",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T08:17:18.000Z",
+            "updatedAt": "2020-05-13T08:20:10.000Z"
+        },
+        {
+            "id": "50",
+            "partOf": "158",
+            "madeUpOf": "188",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T08:21:23.000Z",
+            "updatedAt": "2020-05-13T08:26:48.000Z"
+        },
+        {
+            "id": "52",
+            "partOf": "159",
+            "madeUpOf": "189",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T08:27:07.000Z",
+            "updatedAt": "2020-05-13T08:44:23.000Z"
+        },
+        {
+            "id": "60",
+            "partOf": "200",
+            "madeUpOf": "200",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T08:44:40.000Z",
+            "updatedAt": "2020-05-13T08:44:46.000Z"
+        }
+    ]
+}
+
+2.
+Fetch a category rollup with id param
+Request: ?id=1
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893600759,
+    "data": [
+        {
+            "id": "1",
+            "partOf": "10",
+            "madeUpOf": "7",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-12T05:47:14.000Z",
+            "updatedAt": "2020-05-12T12:27:49.000Z"
+        }
+    ]
+}
+
+3.
+Fetch a category rollup with partOf param
+Request: ?partOf=150
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893602568,
+    "data": [
+        {
+            "id": "20",
+            "partOf": "150",
+            "madeUpOf": "180",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T06:26:34.000Z",
+            "updatedAt": "2020-05-13T06:26:34.000Z"
+        }
+    ]
+}
+
+4.
+Fetch a category rollup with madeUpOf param
+Request: ?madeUpOf=7
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893603856,
+    "data": [
+        {
+            "id": "1",
+            "partOf": "10",
+            "madeUpOf": "7",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-12T05:47:14.000Z",
+            "updatedAt": "2020-05-12T12:27:49.000Z"
+        },
+        {
+            "id": "2",
+            "partOf": "6",
+            "madeUpOf": "7",
+            "status": 0,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-12T05:48:02.000Z",
+            "updatedAt": "2020-05-13T08:29:01.000Z"
+        }
+    ]
+}
+
+5.
+Fetch a category with non-existent id param
+Request: ?id=500
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893614770,
+    "data": []
+}
+
+6.
+Fetch a category with non-existent partOf param
+Request: ?partOf=500
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893616941,
+    "data": []
+}
+
+7.
+Fetch a category with non-existent madeUpOf param
+Request: ?madeUpOf=500
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893617663,
+    "data": []
+}
+
+POST /categories/rollup
+
+1.
+Create a new category rollup
+Request: {
+    "partOf": "300",
+    "madeUpOf": "500",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893619885,
+    "data": [
+        {
+            "id": "62",
+            "partOf": "300",
+            "madeUpOf": "500",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T09:26:28.000Z",
+            "updatedAt": "2020-05-13T09:26:28.000Z"
+        }
+    ]
+}
+
+2.
+duplication allowed on same partOf-madeUpOf key pair
+Request: {
+    "partOf": "300",
+    "madeUpOf": "500",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893621306,
+    "data": [
+        {
+            "id": "62",
+            "partOf": "300",
+            "madeUpOf": "500",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T09:26:28.000Z",
+            "updatedAt": "2020-05-13T09:28:50.000Z"
+        }
+    ]
+}
+
+3.
+Create a category rollup with same partOf but different madeUpOf
+Request: {
+    "partOf": "300",
+    "madeUpOf": "501",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893623078,
+    "data": [
+        {
+            "id": "64",
+            "partOf": "300",
+            "madeUpOf": "501",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T09:30:24.000Z",
+            "updatedAt": "2020-05-13T09:31:47.000Z"
+        }
+    ]
+}
+
+4.
+Create a category rollup with same madeUpOf but different partOf
+Request: {
+    "partOf": "301",
+    "madeUpOf": "501",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893623895,
+    "data": [
+        {
+            "id": "66",
+            "partOf": "301",
+            "madeUpOf": "501",
+            "status": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-13T09:33:09.000Z",
+            "updatedAt": "2020-05-13T09:33:09.000Z"
+        }
+    ]
+}
+
+5.
+Create  a category rollup without partOf throws exception
+Request: {
+    "madeUpOf": "501",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 4,
+    "title": "Bad Request",
+    "details": "\"partOf\" is required",
+    "timestamp": 15893647905
+}
+
+6.
+Create a category rollup without madeUpOf throws exception
+Request: {
+    "partOf": "301",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 4,
+    "title": "Bad Request",
+    "details": "\"madeUpOf\" is required",
+    "timestamp": 15893648839
+}
+
+PUT /categories/rollup
+
+1.
+Update a category rollup status with id param
+Request: {
+    "id": "1",
+    "status": "0",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15893626077,
+    "data": [
+        {
+            "id": "1",
+            "partOf": "10",
+            "madeUpOf": "7",
+            "status": 0,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-12T05:47:14.000Z",
+            "updatedAt": "2020-05-13T09:36:47.000Z"
+        }
+    ]
+}
+
+2.
+Update a category rollup status with non-existent id throws exception
+Request: {
+    "id": "500",
+    "status": "0",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 4,
+    "title": "Bad Request",
+    "details": "Invalide Category Rollup Id",
+    "timestamp": 15893627036
+}
+
+3.
+Update a category without status throws exception
+Request: {
+    "id": "500",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 4,
+    "title": "Bad Request",
+    "details": "\"status\" is required",
+    "timestamp": 15893649136
+}
