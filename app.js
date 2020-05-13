@@ -15,10 +15,12 @@ module.exports = async () => {
   app.use(cookieParser());
 
   const db = require('./db/models');
+  const categoryService = require('./lib/category')(db);
+  const categoryRollupService = require('./lib/category-rollup')(db,categoryService);
 
   app.use('/api',
-    require('./routes/category')(require('./lib/category')(db)),
-    require('./routes/category-rollup')(require('./lib/category-rollup')(db))
+    require('./routes/category')(categoryService),
+    require('./routes/category-rollup')(categoryRollupService)
   );
 
   return app;

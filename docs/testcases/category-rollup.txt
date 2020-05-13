@@ -484,7 +484,8 @@ Response: {
     "timestamp": 15893649136
 }
 
-4. Updating status with any number than 0 or 1 throws exception
+4. 
+Updating status with any number than 0 or 1 throws exception
 Request: {
     "id": "500",
     "status": "10",
