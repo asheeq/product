@@ -7,8 +7,8 @@ module.exports = (ValidationSchema, Joi) => {
       name: Joi.string().max(255).optional(),
       startDate: Joi.date().format('YYYY-MM-DD').options({convert: true}).optional(),
       endDate: Joi.date().format('YYYY-MM-DD').min(Joi.ref('startDate')).options({convert: true}).optional(),
-      offset: Joi.number().integer().min(0).options({convert: true}).optional(),
-      limit: Joi.number().integer().min(1).options({convert: true}).optional()
+      offset: Joi.number().integer().min(0).optional(),
+      limit: Joi.number().integer().min(1).optional()
     })),
     ValidationSchema.define('ProductUpdate', Joi.object().keys({
       id: Joi.number().integer().min(1).required(),
