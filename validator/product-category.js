@@ -7,7 +7,7 @@ module.exports = (ValidationSchema, Joi) => {
       name: Joi.string().max(255).optional(),
     })),
     ValidationSchema.define('CategoryUpdate', Joi.object().keys({
-      id: Joi.number().integer().required(),
+      id: Joi.number().integer().min(1).required(),
       name: Joi.string().max(255).optional(),
       description: Joi.string().max(1024).optional(),
       updatedBy: Joi.string().max(255).required()
