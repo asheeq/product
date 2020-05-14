@@ -399,31 +399,33 @@ Response: {
 }
 
 5.
-Create  a category rollup without partOf throws exception
+Non-existent category id for partOf throws invalid category id for partOf exception
 Request: {
-    "madeUpOf": "501",
+    "partOf": "100",
+    "madeUpOf": "2",
     "createdBy": "admin"
 }
 Response: {
     "status": 400,
-    "code": 4,
+    "code": 6,
     "title": "Bad Request",
-    "details": "\"partOf\" is required",
-    "timestamp": 15893647905
+    "details": "Invalid Category Id for PartOf",
+    "timestamp": 15894355935
 }
 
 6.
-Create a category rollup without madeUpOf throws exception
+non-existent category id for madeaUpOf throws invalid category id for madeUpOf exception
 Request: {
-    "partOf": "301",
+    "partOf": "1",
+    "madeUpOf": "2000",
     "createdBy": "admin"
 }
 Response: {
     "status": 400,
-    "code": 4,
+    "code": 7,
     "title": "Bad Request",
-    "details": "\"madeUpOf\" is required",
-    "timestamp": 15893648839
+    "details": "Invalid Category Id for MadeUpOf",
+    "timestamp": 15894357663
 }
 
 PUT /categories/rollup
@@ -469,33 +471,3 @@ Response: {
     "details": "Invalide Category Rollup Id",
     "timestamp": 15893627036
 }
-
-3.
-Update a category without status throws exception
-Request: {
-    "id": "500",
-    "updatedBy": "admin"
-}
-Response: {
-    "status": 400,
-    "code": 4,
-    "title": "Bad Request",
-    "details": "\"status\" is required",
-    "timestamp": 15893649136
-}
-
-4. 
-Updating status with any number than 0 or 1 throws exception
-Request: {
-    "id": "500",
-    "status": "10",
-    "updatedBy": "admin"
-}
-Response: {
-    "status": 400,
-    "code": 4,
-    "title": "Bad Request",
-    "details": "\"status\" must be one of [0, 1]",
-    "timestamp": 15893651257
-}
-
