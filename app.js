@@ -17,10 +17,12 @@ module.exports = async () => {
   const db = require('./db/models');
   const categoryService = require('./lib/category')(db);
   const categoryRollupService = require('./lib/category-rollup')(db,categoryService);
+  const productService = require('./lib/product')(db);
 
   app.use('/api',
     require('./routes/category')(categoryService),
-    require('./routes/category-rollup')(categoryRollupService)
+    require('./routes/category-rollup')(categoryRollupService),
+    require('./routes/product')(productService)
   );
 
   return app;

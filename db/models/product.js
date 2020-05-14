@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       field: 'introduce_at',
       allowNull: false
-      },
+    },
     salesDiscontinueAt:{
       type: DataTypes.DATE,
       field: 'sales_discontinue_at'
