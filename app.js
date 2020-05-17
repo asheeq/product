@@ -18,11 +18,13 @@ module.exports = async () => {
   const categoryService = require('./lib/category')(db);
   const categoryRollupService = require('./lib/category-rollup')(db,categoryService);
   const productService = require('./lib/product')(db);
+  const productClassificationService = require('./lib/product-category-classification')(db,productService,categoryService);
 
   app.use('/api',
     require('./routes/category')(categoryService),
     require('./routes/category-rollup')(categoryRollupService),
-    require('./routes/product')(productService)
+    require('./routes/product')(productService),
+    require('./routes/product-category-classification')(productClassificationService)
   );
 
   return app;
