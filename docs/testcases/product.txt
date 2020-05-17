@@ -1,0 +1,682 @@
+GET /products
+
+1.
+Fetch all products
+Request:
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896930798,
+    "data": [
+        {
+            "id": "1",
+            "name": "sampleName2",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-25T00:00:00.000Z",
+            "salesDiscontinueAt": "2020-04-27T00:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-14T07:43:12.000Z",
+            "updatedAt": "2020-05-14T07:50:52.000Z"
+        },
+        {
+            "id": "2",
+            "name": "sampleName11",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-25T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:44:25.000Z",
+            "updatedAt": "2020-05-14T07:44:25.000Z"
+        },
+        {
+            "id": "3",
+            "name": "sampleName28",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:44:45.000Z",
+            "updatedAt": "2020-05-14T07:44:45.000Z"
+        },
+        {
+            "id": "4",
+            "name": "sampleName300",
+            "description": "newDescription",
+            "status": 1,
+            "introduceAt": "2020-02-28T00:00:00.000Z",
+            "salesDiscontinueAt": "2020-04-27T00:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-14T07:47:05.000Z",
+            "updatedAt": "2020-05-14T08:00:25.000Z"
+        },
+        {
+            "id": "5",
+            "name": "sampleNameNew",
+            "description": "sampleDescriptionNew",
+            "status": 1,
+            "introduceAt": "2020-02-29T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:58:52.000Z",
+            "updatedAt": "2020-05-14T07:58:52.000Z"
+        },
+        {
+            "id": "6",
+            "name": "sampleNameNew2",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-29T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:59:03.000Z",
+            "updatedAt": "2020-05-14T07:59:03.000Z"
+        },
+        {
+            "id": "8",
+            "name": "sampleNameNew23",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T10:38:28.000Z",
+            "updatedAt": "2020-05-14T10:38:28.000Z"
+        },
+        {
+            "id": "9",
+            "name": "sampleNameNew234",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T10:39:42.000Z",
+            "updatedAt": "2020-05-14T10:39:42.000Z"
+        },
+        {
+            "id": "10",
+            "name": "sampleNameNew2345",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T11:39:24.000Z",
+            "updatedAt": "2020-05-14T11:39:24.000Z"
+        },
+        {
+            "id": "11",
+            "name": "sampleNameNew21",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-05-14T11:53:20.000Z",
+            "salesDiscontinueAt": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T11:53:20.000Z",
+            "updatedAt": "2020-05-14T11:53:20.000Z"
+        },
+        {
+            "id": "12",
+            "name": "sampleNameNew22",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T11:53:50.000Z",
+            "updatedAt": "2020-05-14T11:53:50.000Z"
+        },
+        {
+            "id": "14",
+            "name": "sampleNameNew24",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": "2020-09-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T11:55:46.000Z",
+            "updatedAt": "2020-05-14T11:55:46.000Z"
+        },
+        {
+            "id": "15",
+            "name": "sampleNameNew25",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": "2020-09-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T12:03:10.000Z",
+            "updatedAt": "2020-05-14T12:03:10.000Z"
+        }
+        {
+            "id": "16",
+            "name": "sampleNameNew251",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-05-28T18:00:00.000Z",
+            "salesDiscontinueAt": "2020-09-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-17T05:30:30.000Z",
+            "updatedAt": "2020-05-17T05:30:30.000Z"
+        }
+    ]
+}
+
+2.
+Fetch a product with id param
+Request: ?id=1
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896931833,
+    "data": [
+        {
+            "id": "1",
+            "name": "sampleName2",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-25T00:00:00.000Z",
+            "salesDiscontinueAt": "2020-04-27T00:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-14T07:43:12.000Z",
+            "updatedAt": "2020-05-14T07:50:52.000Z"
+        }
+    ]
+}
+
+3.
+Fetch a product with name param
+Request: ?name=sampleName3
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896933202,
+    "data": [
+        {
+            "id": "2",
+            "name": "sampleName11",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-25T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:44:25.000Z",
+            "updatedAt": "2020-05-14T07:44:25.000Z"
+        }
+    ]
+}
+
+4.
+Fetch products start-date param
+Request: ?startDate=2020-05-15
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896941083,
+    "data": [
+        {
+            "id": "16",
+            "name": "sampleNameNew251",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-05-28T18:00:00.000Z",
+            "salesDiscontinueAt": "2020-09-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-17T05:30:30.000Z",
+            "updatedAt": "2020-05-17T05:30:30.000Z"
+        }
+    ]
+}
+
+5.
+Fetch products with end-date param
+Request: ?startDate=2020-05-15&endDate=2020-05-15
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896942513,
+    "data": [
+        {
+            "id": "1",
+            "name": "sampleName2",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-25T00:00:00.000Z",
+            "salesDiscontinueAt": "2020-04-27T00:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-14T07:43:12.000Z",
+            "updatedAt": "2020-05-14T07:50:52.000Z"
+        },
+        {
+            "id": "2",
+            "name": "sampleName11",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-25T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:44:25.000Z",
+            "updatedAt": "2020-05-14T07:44:25.000Z"
+        },
+        {
+            "id": "3",
+            "name": "sampleName28",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:44:45.000Z",
+            "updatedAt": "2020-05-14T07:44:45.000Z"
+        },
+        {
+            "id": "4",
+            "name": "sampleName300",
+            "description": "newDescription",
+            "status": 1,
+            "introduceAt": "2020-02-28T00:00:00.000Z",
+            "salesDiscontinueAt": "2020-04-27T00:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-14T07:47:05.000Z",
+            "updatedAt": "2020-05-14T08:00:25.000Z"
+        },
+        {
+            "id": "5",
+            "name": "sampleNameNew",
+            "description": "sampleDescriptionNew",
+            "status": 1,
+            "introduceAt": "2020-02-29T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:58:52.000Z",
+            "updatedAt": "2020-05-14T07:58:52.000Z"
+        },
+        {
+            "id": "6",
+            "name": "sampleNameNew2",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-29T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:59:03.000Z",
+            "updatedAt": "2020-05-14T07:59:03.000Z"
+        },
+        {
+            "id": "8",
+            "name": "sampleNameNew23",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T10:38:28.000Z",
+            "updatedAt": "2020-05-14T10:38:28.000Z"
+        },
+        {
+            "id": "9",
+            "name": "sampleNameNew234",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T10:39:42.000Z",
+            "updatedAt": "2020-05-14T10:39:42.000Z"
+        },
+        {
+            "id": "10",
+            "name": "sampleNameNew2345",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T11:39:24.000Z",
+            "updatedAt": "2020-05-14T11:39:24.000Z"
+        },
+        {
+            "id": "11",
+            "name": "sampleNameNew21",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-05-14T11:53:20.000Z",
+            "salesDiscontinueAt": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T11:53:20.000Z",
+            "updatedAt": "2020-05-14T11:53:20.000Z"
+        },
+        {
+            "id": "12",
+            "name": "sampleNameNew22",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T11:53:50.000Z",
+            "updatedAt": "2020-05-14T11:53:50.000Z"
+        },
+        {
+            "id": "14",
+            "name": "sampleNameNew24",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": "2020-09-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T11:55:46.000Z",
+            "updatedAt": "2020-05-14T11:55:46.000Z"
+        },
+        {
+            "id": "15",
+            "name": "sampleNameNew25",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": "2020-09-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T12:03:10.000Z",
+            "updatedAt": "2020-05-14T12:03:10.000Z"
+        }
+    ]
+}
+
+6.
+Fetch products with offset and limit param
+Request: ?offset=0&limit=5
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896943539,
+    "data": [
+        {
+            "id": "1",
+            "name": "sampleName2",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-25T00:00:00.000Z",
+            "salesDiscontinueAt": "2020-04-27T00:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-14T07:43:12.000Z",
+            "updatedAt": "2020-05-14T07:50:52.000Z"
+        },
+        {
+            "id": "2",
+            "name": "sampleName11",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-25T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:44:25.000Z",
+            "updatedAt": "2020-05-14T07:44:25.000Z"
+        },
+        {
+            "id": "3",
+            "name": "sampleName28",
+            "description": null,
+            "status": 1,
+            "introduceAt": "2020-02-28T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:44:45.000Z",
+            "updatedAt": "2020-05-14T07:44:45.000Z"
+        },
+        {
+            "id": "4",
+            "name": "sampleName300",
+            "description": "newDescription",
+            "status": 1,
+            "introduceAt": "2020-02-28T00:00:00.000Z",
+            "salesDiscontinueAt": "2020-04-27T00:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-14T07:47:05.000Z",
+            "updatedAt": "2020-05-14T08:00:25.000Z"
+        },
+        {
+            "id": "5",
+            "name": "sampleNameNew",
+            "description": "sampleDescriptionNew",
+            "status": 1,
+            "introduceAt": "2020-02-29T00:00:00.000Z",
+            "salesDiscontinueAt": null,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-14T07:58:52.000Z",
+            "updatedAt": "2020-05-14T07:58:52.000Z"
+        }
+    ]
+}
+
+7.
+Fetch a product with non-existent id param
+Request: ?id=200
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896944552,
+    "data": []
+}
+
+8.
+Fetch a product with non-existent name param
+Request: ?name=sampleName
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896945388,
+    "data": []
+}
+
+9.
+Fetch products with start-date and end-date where no products exist
+Request: ?startDate=2020-01-25&endDate=2020-01-30
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896947463,
+    "data": []
+}
+
+POST /products
+
+1.
+Create a new product
+Request: {
+    "name": "sampleName50",
+    "description": "sampleDescriptionNew",
+    "introduceAt": "2020-05-29 10:00:00",
+    "salesDiscontinueAt": "2020-10-01 12:00:00"
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896954978,
+    "data": [
+        {
+            "id": "19",
+            "name": "sampleName50",
+            "description": "sampleDescriptionNew",
+            "status": 1,
+            "introduceAt": "2020-05-29T04:00:00.000Z",
+            "salesDiscontinueAt": "2020-10-01T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-17T06:04:57.000Z",
+            "updatedAt": "2020-05-17T06:04:57.000Z"
+        }
+    ]
+}
+
+2.
+Create a product with default introduce-at and sales discontinue-at param
+Request: {
+    "name": "sampleName60",
+    "description": "sampleDescription",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896955788,
+    "data": [
+        {
+            "id": "20",
+            "name": "sampleName60",
+            "description": "sampleDescription",
+            "status": 1,
+            "introduceAt": "2020-05-17T06:06:18.000Z",
+            "salesDiscontinueAt": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-17T06:06:18.000Z",
+            "updatedAt": "2020-05-17T06:06:18.000Z"
+        }
+    ]
+}
+
+3.
+Duplicate product name throws exception
+Request: {
+    "name": "sampleName60",
+    "description": "sampleDescription",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 8,
+    "title": "Bad Request",
+    "details": "Duplicate Product name",
+    "timestamp": 15896957251
+}
+
+PUT /products
+
+1.
+Update a product
+Request: {
+    "id": "10",
+    "name": "sampleName10new",
+    "description": "sampleDescriptionNew",
+    "status": "0",
+    "salesDiscontinueAt": "2020-10-01 12:00:00",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15896963939,
+    "data": [
+        {
+            "id": "10",
+            "name": "sampleName10new",
+            "description": "sampleDescriptionNew",
+            "status": 0,
+            "introduceAt": "2020-02-28T18:00:00.000Z",
+            "salesDiscontinueAt": "2020-10-01T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-14T11:39:24.000Z",
+            "updatedAt": "2020-05-17T06:19:53.000Z"
+        }
+    ]
+}
+
+2.
+Updating a product with non-existent id param throws invalide product id exception
+Request: {
+    "id": "500",
+    "name": "sampleName10new",
+    "description": "sampleDescriptionNew",
+    "status": "0",
+    "salesDiscontinueAt": "2020-10-01 12:00:00",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 10,
+    "title": "Bad Request",
+    "details": "Invalid Product Id",
+    "timestamp": 15896965129
+}
+
+3.
+Duplication of product name throws exception
+Request: {
+    "id": "1",
+    "name": "sampleName10new",
+    "description": "sampleDescriptionNew",
+    "status": "0",
+    "salesDiscontinueAt": "2020-10-01 12:00:00",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 8,
+    "title": "Bad Request",
+    "details": "Duplicate Product name",
+    "timestamp": 15896965999
+}
