@@ -1,0 +1,92 @@
+POST products/classification
+
+1.
+Create a new product category classification
+Request: {
+    "productId": "11",
+    "categoryId": "4",
+    "isPrimary": "true",
+    "fromDate": "2020-10-01 12:00:00",
+    "thruDate": "2020-12-20 12:00:00",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897883949,
+    "data": [
+        {
+            "id": "31",
+            "categoryId": "4",
+            "productId": "11",
+            "fromDate": "2020-10-01T06:00:00.000Z",
+            "thruDate": "2020-12-20T06:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:53:14.000Z",
+            "updatedAt": "2020-05-18T07:53:14.000Z"
+        }
+    ]
+}
+
+2.
+create a new product category classification with default isPrimary,fromDate and thruDate
+Request: {
+    "productId": "11",
+    "categoryId": "5",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897885291,
+    "data": [
+        {
+            "id": "32",
+            "categoryId": "5",
+            "productId": "11",
+            "fromDate": "2020-05-18T07:55:29.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:55:29.000Z",
+            "updatedAt": "2020-05-18T07:55:29.000Z"
+        }
+    ]
+}
+
+3.
+Non-existent product Id throws invalid productId exception
+Request: {
+    "productId": "200",
+    "categoryId": "5",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 10,
+    "title": "Bad Request",
+    "details": "Invalid Product Id",
+    "timestamp": 15897885982
+}
+
+4.
+Non-existent categoryId throws invalid categoryId exception
+Request: {
+    "productId": "11",
+    "categoryId": "500",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 3,
+    "title": "Bad Request",
+    "details": "Invalid Category Id",
+    "timestamp": 15897886688
+}
