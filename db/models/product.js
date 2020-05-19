@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'product'
   });
 
+  // eslint-disable-next-line no-unused-vars
   Product.associate = function(models) {
     //Product.hasMany(models['ProductAssociation']);
   };
