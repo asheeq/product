@@ -1,3 +1,1046 @@
+GET /products/classification
+
+1.
+Fetch all product-category-classifications
+Request:
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897855612,
+    "data": [
+        {
+            "id": "1",
+            "categoryId": "1",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:12.000Z",
+            "updatedAt": "2020-05-18T04:55:12.000Z"
+        },
+        {
+            "id": "2",
+            "categoryId": "2",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:32.000Z",
+            "updatedAt": "2020-05-18T04:55:32.000Z"
+        },
+        {
+            "id": "3",
+            "categoryId": "3",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:40.000Z",
+            "updatedAt": "2020-05-18T04:55:40.000Z"
+        },
+        {
+            "id": "4",
+            "categoryId": "4",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:56:04.000Z",
+            "updatedAt": "2020-05-18T04:56:04.000Z"
+        },
+        {
+            "id": "5",
+            "categoryId": "1",
+            "productId": "2",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:56:20.000Z",
+            "updatedAt": "2020-05-18T04:56:20.000Z"
+        },
+        {
+            "id": "6",
+            "categoryId": "3",
+            "productId": "2",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:01:00.000Z",
+            "updatedAt": "2020-05-18T05:01:00.000Z"
+        },
+        {
+            "id": "7",
+            "categoryId": "2",
+            "productId": "2",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:01:47.000Z",
+            "updatedAt": "2020-05-18T05:01:47.000Z"
+        },
+        {
+            "id": "8",
+            "categoryId": "1",
+            "productId": "3",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:02:06.000Z",
+            "updatedAt": "2020-05-18T05:02:06.000Z"
+        },
+        {
+            "id": "9",
+            "categoryId": "2",
+            "productId": "3",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:02:16.000Z",
+            "updatedAt": "2020-05-18T05:02:16.000Z"
+        },
+        {
+            "id": "10",
+            "categoryId": "1",
+            "productId": "4",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:34:29.000Z",
+            "updatedAt": "2020-05-18T06:34:29.000Z"
+        },
+        {
+            "id": "11",
+            "categoryId": "2",
+            "productId": "4",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:34:43.000Z",
+            "updatedAt": "2020-05-18T06:34:43.000Z"
+        },
+        {
+            "id": "12",
+            "categoryId": "1",
+            "productId": "5",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:36:48.000Z",
+            "updatedAt": "2020-05-18T06:36:48.000Z"
+        },
+        {
+            "id": "13",
+            "categoryId": "2",
+            "productId": "5",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:37:37.000Z",
+            "updatedAt": "2020-05-18T06:37:37.000Z"
+        },
+        {
+            "id": "14",
+            "categoryId": "1",
+            "productId": "6",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:39:29.000Z",
+            "updatedAt": "2020-05-18T06:39:29.000Z"
+        },
+        {
+            "id": "15",
+            "categoryId": "2",
+            "productId": "6",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:39:47.000Z",
+            "updatedAt": "2020-05-18T06:39:47.000Z"
+        },
+        {
+            "id": "17",
+            "categoryId": "1",
+            "productId": "7",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:44:56.000Z",
+            "updatedAt": "2020-05-18T06:44:56.000Z"
+        },
+        {
+            "id": "19",
+            "categoryId": "2",
+            "productId": "8",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:47:09.000Z",
+            "updatedAt": "2020-05-18T06:47:09.000Z"
+        },
+        {
+            "id": "20",
+            "categoryId": "1",
+            "productId": "8",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:47:15.000Z",
+            "updatedAt": "2020-05-18T06:47:15.000Z"
+        },
+        {
+            "id": "24",
+            "categoryId": "5",
+            "productId": "9",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:00:38.000Z",
+            "updatedAt": "2020-05-18T07:00:38.000Z"
+        },
+        {
+            "id": "25",
+            "categoryId": "6",
+            "productId": "9",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:01:36.000Z",
+            "updatedAt": "2020-05-18T07:01:36.000Z"
+        }
+    ]
+}
+
+2.
+Fetch a product-category-classification with id param
+Request: ?id=1
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897856595,
+    "data": [
+        {
+            "id": "1",
+            "categoryId": "1",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:12.000Z",
+            "updatedAt": "2020-05-18T04:55:12.000Z"
+        }
+    ]
+}
+
+3.
+Fetch a product category classification with productId param
+Request: ?productId=1
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897857410,
+    "data": [
+        {
+            "id": "1",
+            "categoryId": "1",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:12.000Z",
+            "updatedAt": "2020-05-18T04:55:12.000Z"
+        },
+        {
+            "id": "2",
+            "categoryId": "2",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:32.000Z",
+            "updatedAt": "2020-05-18T04:55:32.000Z"
+        },
+        {
+            "id": "3",
+            "categoryId": "3",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:40.000Z",
+            "updatedAt": "2020-05-18T04:55:40.000Z"
+        },
+        {
+            "id": "4",
+            "categoryId": "4",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:56:04.000Z",
+            "updatedAt": "2020-05-18T04:56:04.000Z"
+        }
+    ]
+}
+
+4.
+Fetch a product category classification with categoryId param
+Request: ?categoryId=1
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897858103,
+    "data": [
+        {
+            "id": "1",
+            "categoryId": "1",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:12.000Z",
+            "updatedAt": "2020-05-18T04:55:12.000Z"
+        },
+        {
+            "id": "5",
+            "categoryId": "1",
+            "productId": "2",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:56:20.000Z",
+            "updatedAt": "2020-05-18T04:56:20.000Z"
+        },
+        {
+            "id": "8",
+            "categoryId": "1",
+            "productId": "3",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:02:06.000Z",
+            "updatedAt": "2020-05-18T05:02:06.000Z"
+        },
+        {
+            "id": "10",
+            "categoryId": "1",
+            "productId": "4",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:34:29.000Z",
+            "updatedAt": "2020-05-18T06:34:29.000Z"
+        },
+        {
+            "id": "12",
+            "categoryId": "1",
+            "productId": "5",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:36:48.000Z",
+            "updatedAt": "2020-05-18T06:36:48.000Z"
+        },
+        {
+            "id": "14",
+            "categoryId": "1",
+            "productId": "6",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:39:29.000Z",
+            "updatedAt": "2020-05-18T06:39:29.000Z"
+        },
+        {
+            "id": "17",
+            "categoryId": "1",
+            "productId": "7",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:44:56.000Z",
+            "updatedAt": "2020-05-18T06:44:56.000Z"
+        },
+        {
+            "id": "20",
+            "categoryId": "1",
+            "productId": "8",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:47:15.000Z",
+            "updatedAt": "2020-05-18T06:47:15.000Z"
+        }
+    ]
+}
+
+5.
+Fetch a product category classification with isPrimary param
+Request: ?isPrimary=true
+Reponse: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897925286,
+    "data": [
+        {
+            "id": "4",
+            "categoryId": "4",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:56:04.000Z",
+            "updatedAt": "2020-05-18T04:56:04.000Z"
+        },
+        {
+            "id": "5",
+            "categoryId": "1",
+            "productId": "2",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:56:20.000Z",
+            "updatedAt": "2020-05-18T04:56:20.000Z"
+        },
+        {
+            "id": "8",
+            "categoryId": "1",
+            "productId": "3",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:02:06.000Z",
+            "updatedAt": "2020-05-18T05:02:06.000Z"
+        },
+        {
+            "id": "10",
+            "categoryId": "1",
+            "productId": "4",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:34:29.000Z",
+            "updatedAt": "2020-05-18T06:34:29.000Z"
+        },
+        {
+            "id": "12",
+            "categoryId": "1",
+            "productId": "5",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:36:48.000Z",
+            "updatedAt": "2020-05-18T06:36:48.000Z"
+        },
+        {
+            "id": "14",
+            "categoryId": "1",
+            "productId": "6",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:39:29.000Z",
+            "updatedAt": "2020-05-18T06:39:29.000Z"
+        },
+        {
+            "id": "17",
+            "categoryId": "1",
+            "productId": "7",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:44:56.000Z",
+            "updatedAt": "2020-05-18T06:44:56.000Z"
+        },
+        {
+            "id": "19",
+            "categoryId": "2",
+            "productId": "8",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:47:09.000Z",
+            "updatedAt": "2020-05-18T06:47:09.000Z"
+        },
+        {
+            "id": "24",
+            "categoryId": "5",
+            "productId": "9",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:00:38.000Z",
+            "updatedAt": "2020-05-18T07:00:38.000Z"
+        },
+        {
+            "id": "27",
+            "categoryId": "7",
+            "productId": "10",
+            "fromDate": "2020-05-18T03:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:29:11.000Z",
+            "updatedAt": "2020-05-18T07:29:11.000Z"
+        },
+        {
+            "id": "31",
+            "categoryId": "4",
+            "productId": "11",
+            "fromDate": "2020-10-01T06:00:00.000Z",
+            "thruDate": "2020-12-20T06:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:53:14.000Z",
+            "updatedAt": "2020-05-18T07:53:14.000Z"
+        }
+    ]
+}
+
+6.
+Fetch a product category classification with startDate param
+Request: ?startDate=2020-05-19
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15898775197,
+    "data": [
+        {
+            "id": "34",
+            "categoryId": "5",
+            "productId": "1",
+            "fromDate": "2020-05-19T04:30:01.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-19T04:30:01.000Z",
+            "updatedAt": "2020-05-19T07:43:55.000Z"
+        }
+    ]
+}
+
+7.
+Fetch a product category classification with endDate param
+Request: ?startDate=2020-05-10&endDate=2020-05-19
+Response: {
+{
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15898776570,
+    "data": [
+        {
+            "id": "1",
+            "categoryId": "1",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-18T04:55:12.000Z",
+            "updatedAt": "2020-05-19T07:43:55.000Z"
+        },
+        {
+            "id": "2",
+            "categoryId": "2",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:32.000Z",
+            "updatedAt": "2020-05-18T04:55:32.000Z"
+        },
+        {
+            "id": "3",
+            "categoryId": "3",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:40.000Z",
+            "updatedAt": "2020-05-18T04:55:40.000Z"
+        },
+        {
+            "id": "4",
+            "categoryId": "4",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-18T04:56:04.000Z",
+            "updatedAt": "2020-05-19T05:01:46.000Z"
+        },
+        {
+            "id": "5",
+            "categoryId": "1",
+            "productId": "2",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:56:20.000Z",
+            "updatedAt": "2020-05-18T04:56:20.000Z"
+        },
+        {
+            "id": "6",
+            "categoryId": "3",
+            "productId": "2",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:01:00.000Z",
+            "updatedAt": "2020-05-18T05:01:00.000Z"
+        },
+        {
+            "id": "7",
+            "categoryId": "2",
+            "productId": "2",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:01:47.000Z",
+            "updatedAt": "2020-05-18T05:01:47.000Z"
+        },
+        {
+            "id": "8",
+            "categoryId": "1",
+            "productId": "3",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:02:06.000Z",
+            "updatedAt": "2020-05-18T05:02:06.000Z"
+        },
+        {
+            "id": "9",
+            "categoryId": "2",
+            "productId": "3",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T05:02:16.000Z",
+            "updatedAt": "2020-05-18T05:02:16.000Z"
+        },
+        {
+            "id": "10",
+            "categoryId": "1",
+            "productId": "4",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:34:29.000Z",
+            "updatedAt": "2020-05-18T06:34:29.000Z"
+        },
+        {
+            "id": "11",
+            "categoryId": "2",
+            "productId": "4",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:34:43.000Z",
+            "updatedAt": "2020-05-18T06:34:43.000Z"
+        },
+        {
+            "id": "12",
+            "categoryId": "1",
+            "productId": "5",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:36:48.000Z",
+            "updatedAt": "2020-05-18T06:36:48.000Z"
+        },
+        {
+            "id": "13",
+            "categoryId": "2",
+            "productId": "5",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:37:37.000Z",
+            "updatedAt": "2020-05-18T06:37:37.000Z"
+        },
+        {
+            "id": "14",
+            "categoryId": "1",
+            "productId": "6",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:39:29.000Z",
+            "updatedAt": "2020-05-18T06:39:29.000Z"
+        },
+        {
+            "id": "17",
+            "categoryId": "1",
+            "productId": "7",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:44:56.000Z",
+            "updatedAt": "2020-05-18T06:44:56.000Z"
+        },
+        {
+            "id": "18",
+            "categoryId": "2",
+            "productId": "7",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:45:02.000Z",
+            "updatedAt": "2020-05-18T06:45:02.000Z"
+        },
+        {
+            "id": "19",
+            "categoryId": "2",
+            "productId": "8",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T06:47:09.000Z",
+            "updatedAt": "2020-05-18T06:47:09.000Z"
+        },
+        {
+            "id": "24",
+            "categoryId": "5",
+            "productId": "9",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:00:38.000Z",
+            "updatedAt": "2020-05-18T07:00:38.000Z"
+        },
+        {
+            "id": "25",
+            "categoryId": "6",
+            "productId": "9",
+            "fromDate": "2020-05-17T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:01:36.000Z",
+            "updatedAt": "2020-05-18T07:01:36.000Z"
+        },
+        {
+            "id": "26",
+            "categoryId": "7",
+            "productId": "9",
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:27:33.000Z",
+            "updatedAt": "2020-05-18T07:27:33.000Z"
+        },
+        {
+            "id": "27",
+            "categoryId": "7",
+            "productId": "10",
+            "fromDate": "2020-05-18T03:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:29:11.000Z",
+            "updatedAt": "2020-05-18T07:29:11.000Z"
+        },
+        {
+            "id": "28",
+            "categoryId": "1",
+            "productId": "10",
+            "fromDate": "2020-10-01T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:31:45.000Z",
+            "updatedAt": "2020-05-18T07:31:45.000Z"
+        },
+        {
+            "id": "29",
+            "categoryId": "2",
+            "productId": "10",
+            "fromDate": "2020-01-01T06:00:00.000Z",
+            "thruDate": "2020-12-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:36:08.000Z",
+            "updatedAt": "2020-05-18T07:36:08.000Z"
+        },
+        {
+            "id": "30",
+            "categoryId": "3",
+            "productId": "10",
+            "fromDate": "2020-01-01T06:00:00.000Z",
+            "thruDate": "2020-03-31T04:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:37:09.000Z",
+            "updatedAt": "2020-05-18T07:37:09.000Z"
+        },
+        {
+            "id": "31",
+            "categoryId": "4",
+            "productId": "11",
+            "fromDate": "2020-10-01T06:00:00.000Z",
+            "thruDate": "2020-12-20T06:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:53:14.000Z",
+            "updatedAt": "2020-05-18T07:53:14.000Z"
+        },
+        {
+            "id": "32",
+            "categoryId": "5",
+            "productId": "11",
+            "fromDate": "2020-05-18T07:55:29.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T07:55:29.000Z",
+            "updatedAt": "2020-05-18T07:55:29.000Z"
+        }
+    ]
+}
+
+8.
+Fetch a product category classification with offset and limit
+Request: ?offset=0&limit=2
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15898781552,
+    "data": [
+        {
+            "id": "1",
+            "categoryId": "1",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-18T04:55:12.000Z",
+            "updatedAt": "2020-05-19T07:43:55.000Z"
+        },
+        {
+            "id": "2",
+            "categoryId": "2",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 0,
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-18T04:55:32.000Z",
+            "updatedAt": "2020-05-18T04:55:32.000Z"
+        }
+    ]
+}
+
+9.
+Fetch a product category classification with non-existent id param
+Request: ?id=200
+Reponse: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897876322,
+    "data": []
+}
+
+10.
+Fetch a product category classification with non-existent productId param
+Request: ?productId=200
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897878133,
+    "data": []
+}
+
+11.
+Fetch a product category classification with non-existent categoryId param
+Request: ?categoryId=200
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897878833,
+    "data": []
+}
+
+12.
+Fetch a product category classification with startDate param where no product exists
+Request: ?startDate=2021-02-10
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897879702,
+    "data": []
+}
+
+13.
+Fetch a product category classification with thru date where no product exists
+Request: ?startDate=2021-02-10&endDate=2022-05-01
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15897880569,
+    "data": []
+}
+
 POST products/classification
 
 1.
@@ -89,4 +1132,81 @@ Response: {
     "title": "Bad Request",
     "details": "Invalid Category Id",
     "timestamp": 15897886688
+}
+
+PUT /products/classification
+
+1.
+Update a product category classification
+Request:{ 
+    "id": "1",
+    "fromDate": "2020-05-20 12:00:00",
+    "thruDate": "2020-10-20 12:00:00",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15898783065,
+    "data": [
+        {
+            "id": "1",
+            "categoryId": "1",
+            "productId": "1",
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-10-20T06:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-18T04:55:12.000Z",
+            "updatedAt": "2020-05-19T08:51:46.000Z"
+        }
+    ]
+}
+
+2.
+Update a primary product category classification
+Request: {
+    "id": "2",
+    "isPrimary": "true",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15898786074,
+    "data": [
+        {
+            "id": "2",
+            "categoryId": "2",
+            "productId": "1",
+            "fromDate": "2020-05-17T00:00:00.000Z",
+            "thruDate": "2020-12-31T00:00:00.000Z",
+            "isPrimary": 1,
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-18T04:55:32.000Z",
+            "updatedAt": "2020-05-19T08:56:47.000Z"
+        }
+    ]
+}
+
+3.
+Invalid product category classification id throws exception
+Request:{ 
+    "id": "200",
+    "fromDate": "2020-05-20 12:00:00",
+    "thruDate": "2020-10-20 12:00:00",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 12,
+    "title": "Bad Request",
+    "details": "Invalid Product Category Classification Id",
+    "timestamp": 15898788670
 }
