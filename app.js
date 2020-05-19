@@ -19,12 +19,14 @@ module.exports = async () => {
   const categoryRollupService = require('./lib/category-rollup')(db,categoryService);
   const productService = require('./lib/product')(db);
   const productClassificationService = require('./lib/product-category-classification')(db,productService,categoryService);
+  const productAssociationService = require('./lib/product-association')(db,productService);
 
   app.use('/api',
     require('./routes/category')(categoryService),
     require('./routes/category-rollup')(categoryRollupService),
     require('./routes/product')(productService),
-    require('./routes/product-category-classification')(productClassificationService)
+    require('./routes/product-category-classification')(productClassificationService),
+    require('./routes/product-association')(productAssociationService)
   );
 
   return app;

@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'product_category'
   });
 
+  // eslint-disable-next-line no-unused-vars
   ProductCategory.associate = function(models) {
   };
 

@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Product.associate = function(models) {
-    Product.hasMany(models['ProductAssociation']);
+    //Product.hasMany(models['ProductAssociation']);
   };
 
   return Product;
