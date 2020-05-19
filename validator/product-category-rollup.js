@@ -3,9 +3,9 @@
 module.exports = (ValidationSchema, Joi) => {
   return [
     ValidationSchema.define('CategoryRollupFetch', Joi.object().keys({
-      id: Joi.number().integer().optional(),
-      partOf: Joi.number().integer().optional(),
-      madeUpOf: Joi.number().integer().optional()
+      id: Joi.number().integer().min(1).optional(),
+      partOf: Joi.number().integer().min(1).optional(),
+      madeUpOf: Joi.number().integer().min(1).optional()
     })),
     ValidationSchema.define('CategoryRollupUpdate', Joi.object().keys({
       id: Joi.number().integer().min(1).required(),

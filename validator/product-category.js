@@ -3,7 +3,7 @@
 module.exports = (ValidationSchema, Joi) => {
   return [
     ValidationSchema.define('CategoryFetch', Joi.object().keys({
-      id: Joi.number().integer().optional(),
+      id: Joi.number().integer().min(1).optional(),
       name: Joi.string().max(255).optional(),
     })),
     ValidationSchema.define('CategoryUpdate', Joi.object().keys({

@@ -3,7 +3,7 @@
 module.exports = (ValidationSchema, Joi) => {
   return [
     ValidationSchema.define('ProductFetch', Joi.object().keys({
-      id: Joi.number().integer().optional(),
+      id: Joi.number().integer().min(1).optional(),
       name: Joi.string().max(255).optional(),
       startDate: Joi.date().format('YYYY-MM-DD').options({convert: true}).optional(),
       endDate: Joi.date().format('YYYY-MM-DD').min(Joi.ref('startDate')).options({convert: true}).optional(),
