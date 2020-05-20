@@ -1,0 +1,611 @@
+GET /products/association
+
+1.
+Fetch all product association
+Request: 
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899606759,
+    "data": [
+        {
+            "id": "1",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "2",
+            "quantity": 100,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-10-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-19T11:12:19.000Z",
+            "updatedAt": "2020-05-20T07:39:31.000Z"
+        },
+        {
+            "id": "5",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "3",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:15:36.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:15:36.000Z",
+            "updatedAt": "2020-05-20T07:15:36.000Z"
+        },
+        {
+            "id": "6",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "4",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:17:49.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:17:49.000Z",
+            "updatedAt": "2020-05-20T07:17:49.000Z"
+        },
+        {
+            "id": "7",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "5",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:18:26.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:18:26.000Z",
+            "updatedAt": "2020-05-20T07:18:26.000Z"
+        },
+        {
+            "id": "8",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "20",
+            "quantity": 10,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-12-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:32:12.000Z",
+            "updatedAt": "2020-05-20T07:32:12.000Z"
+        },
+        {
+            "id": "9",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "19",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:34:45.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:34:45.000Z",
+            "updatedAt": "2020-05-20T07:34:45.000Z"
+        }
+    ]
+}
+
+2.
+Fetch a product association with id param
+Request: ?id=1
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899607259,
+    "data": [
+        {
+            "id": "1",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "2",
+            "quantity": 100,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-10-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-19T11:12:19.000Z",
+            "updatedAt": "2020-05-20T07:39:31.000Z"
+        }
+    ]
+}
+
+3.
+Fetch a product association with associatedWith param
+Request: ?associatedWith=1
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899607893,
+    "data": [
+        {
+            "id": "1",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "2",
+            "quantity": 100,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-10-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-19T11:12:19.000Z",
+            "updatedAt": "2020-05-20T07:39:31.000Z"
+        },
+        {
+            "id": "5",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "3",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:15:36.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:15:36.000Z",
+            "updatedAt": "2020-05-20T07:15:36.000Z"
+        },
+        {
+            "id": "6",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "4",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:17:49.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:17:49.000Z",
+            "updatedAt": "2020-05-20T07:17:49.000Z"
+        },
+        {
+            "id": "7",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "5",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:18:26.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:18:26.000Z",
+            "updatedAt": "2020-05-20T07:18:26.000Z"
+        },
+        {
+            "id": "8",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "20",
+            "quantity": 10,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-12-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:32:12.000Z",
+            "updatedAt": "2020-05-20T07:32:12.000Z"
+        },
+        {
+            "id": "9",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "19",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:34:45.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:34:45.000Z",
+            "updatedAt": "2020-05-20T07:34:45.000Z"
+        }
+    ]
+}
+
+4.
+Fetch a product association with associated param
+Request: ?associated=20
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899613763,
+    "data": [
+        {
+            "id": "8",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "20",
+            "quantity": 10,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-12-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:32:12.000Z",
+            "updatedAt": "2020-05-20T07:32:12.000Z"
+        }
+    ]
+}
+
+5.
+Fetch a product association with type param
+Request: ?type=Incompatible
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899615383,
+    "data": [
+        {
+            "id": "1",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "2",
+            "quantity": 100,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-10-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-19T11:12:19.000Z",
+            "updatedAt": "2020-05-20T07:39:31.000Z"
+        },
+        {
+            "id": "7",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "5",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:18:26.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:18:26.000Z",
+            "updatedAt": "2020-05-20T07:18:26.000Z"
+        }
+    ]
+}
+
+6.
+Fetch a product association with startDate param
+Request: ?startDate=2020-05-20
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899616166,
+    "data": [
+        {
+            "id": "5",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "3",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:15:36.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:15:36.000Z",
+            "updatedAt": "2020-05-20T07:15:36.000Z"
+        },
+        {
+            "id": "6",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "4",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:17:49.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:17:49.000Z",
+            "updatedAt": "2020-05-20T07:17:49.000Z"
+        },
+        {
+            "id": "7",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "5",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:18:26.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:18:26.000Z",
+            "updatedAt": "2020-05-20T07:18:26.000Z"
+        },
+        {
+            "id": "8",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "20",
+            "quantity": 10,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-12-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:32:12.000Z",
+            "updatedAt": "2020-05-20T07:32:12.000Z"
+        },
+        {
+            "id": "9",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "19",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:34:45.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:34:45.000Z",
+            "updatedAt": "2020-05-20T07:34:45.000Z"
+        }
+    ]
+}
+
+7.
+Fetch a product association with endDate param
+Request: ?startDate=2020-05-10&endDate=2020-05-20
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899617338,
+    "data": [
+        {
+            "id": "1",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "2",
+            "quantity": 100,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-10-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-19T11:12:19.000Z",
+            "updatedAt": "2020-05-20T07:39:31.000Z"
+        }
+    ]
+}
+
+8.
+Fetch product associations with offset and limit param
+Request: ?offset=0&limit=2
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899619370,
+    "data": [
+        {
+            "id": "1",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "2",
+            "quantity": 100,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-10-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-19T11:12:19.000Z",
+            "updatedAt": "2020-05-20T07:39:31.000Z"
+        },
+        {
+            "id": "5",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "3",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:15:36.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:15:36.000Z",
+            "updatedAt": "2020-05-20T07:15:36.000Z"
+        }
+    ]
+}
+
+9.
+Fetch a product association with non-existent id param
+Request: ?id=200
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899620153,
+    "data": []
+}
+
+10.
+Fetch a product association with non-existent associatedWith param
+Request: ?associatedWith=200
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899621027,
+    "data": []
+}
+
+11.
+Fetch a product association with non-existent associated param
+Request: ?associated=200
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899621659,
+    "data": []
+}
+
+12.
+Fetch a product association with startDate param where no product association exists
+Request: ?startDate=2021-02-02
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899623142,
+    "data": []
+}
+
+13.
+Fetch a product association with endDate param where no product association exists
+Request: ?startDate=2020-02-01&endDate=2020-03-01
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899624401,
+    "data": []
+}
+
+POST /products/association
+
+1.
+Create a new product association
+Request: {
+    "quantity": "10",
+    "type": "Component",
+    "associatedWith": "1",
+    "associated": "20",
+    "fromDate": "2020-05-20 12:00:00",
+    "thruDate": "2020-10-20 12:00:00",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899599326,
+    "data": [
+        {
+            "id": "8",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "20",
+            "quantity": 10,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-12-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:32:12.000Z",
+            "updatedAt": "2020-05-20T07:32:12.000Z"
+        }
+    ]
+}
+
+2.
+Create a new product association with default values
+Request: {
+    "associatedWith": "1",
+    "associated": "19",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899600853,
+    "data": [
+        {
+            "id": "9",
+            "type": "Component",
+            "associatedWith": "1",
+            "associated": "19",
+            "quantity": 1,
+            "fromDate": "2020-05-20T07:34:45.000Z",
+            "thruDate": "9999-12-30T18:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": null,
+            "createdAt": "2020-05-20T07:34:45.000Z",
+            "updatedAt": "2020-05-20T07:34:45.000Z"
+        }
+    ]
+}
+
+3.
+Duplicate unique tuple throws exception
+Request: {
+    "associatedWith": "1",
+    "associated": "19",
+    "createdBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 18,
+    "title": "Bad Request",
+    "details": "Duplicate Product Association Tuple",
+    "timestamp": 15899601655
+}
+
+PUT /products/association
+
+1.
+Update a product category association
+Request: {
+    "id": "1",
+    "quantity": "100",
+    "type": "Incompatible",
+    "fromDate": "2020-05-20 12:00:00",
+    "thruDate": "2020-10-20 12:00:00",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 200,
+    "code": 0,
+    "title": "Success",
+    "details": "Success",
+    "timestamp": 15899603720,
+    "data": [
+        {
+            "id": "1",
+            "type": "Incompatible",
+            "associatedWith": "1",
+            "associated": "2",
+            "quantity": 100,
+            "fromDate": "2020-05-20T06:00:00.000Z",
+            "thruDate": "2020-10-20T06:00:00.000Z",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createdAt": "2020-05-19T11:12:19.000Z",
+            "updatedAt": "2020-05-20T07:39:31.000Z"
+        }
+    ]
+}
+
+2.
+Update a product association with non-existent id param throws exception
+Request: {
+    "id": "200",
+    "quantity": "100",
+    "type": "Incompatible",
+    "fromDate": "2020-05-20 12:00:00",
+    "thruDate": "2020-10-20 12:00:00",
+    "updatedBy": "admin"
+}
+Response: {
+    "status": 400,
+    "code": 16,
+    "title": "Bad Request",
+    "details": "Invalid Product Association Id",
+    "timestamp": 15899605686
+}
